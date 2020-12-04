@@ -1,14 +1,13 @@
 <template>
   <v-btn
-
-    color="rgba(255, 0, 0, 0)"
-    flat
-    active-class="ryp-ac"
-    class="text-lowercase"
+    :to="link.name"
+    class="text-lowercase ryp-btn"
+    exact-active-class="ryp-ac"
     elevation="0"
-    ripple="false"
     nuxt
     exact
+    text
+    :ripple="false"
   >
       {{text}}
   </v-btn>
@@ -19,13 +18,11 @@
     name: 'HeaderButton',
     props:{
       text: String,
-      value: String
+      link: Object
     }
   }
 </script>
 
 <style scoped>
-  .ryp-ac{
-    color: #582DD2;
-  }
+
 </style>

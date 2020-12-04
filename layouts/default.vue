@@ -27,3 +27,20 @@ export default {
   }
 }
 </script>
+
+<style>
+  .ryp-ac .v-btn__content{
+    color: #582DD2 !important;
+
+  }
+  .ryp-ac:before{
+    opacity: 0 !important;
+  }
+  .ryp-btn:before:hover{
+    opacity: 0 !important;
+  }
+
+  .ryp-btn:hover:before{
+    opacity: 0 !important;
+  }
+</style>

@@ -16,7 +16,7 @@
         v-for="link in menuLinks"
         :key="link.id"
       >
-      <HeaderButton :text="link.text" :name="link.name"/>
+      <HeaderButton :text="link.text" :link="link"/>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
           {
             id: 1,
             text: 'home',
-            name: 'home'
+            name: '/'
           },
           {
             id: 2,
