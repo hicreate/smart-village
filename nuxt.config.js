@@ -11,7 +11,8 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.typekit.net/znu8ouz.css' }
     ]
   },
 
@@ -46,6 +47,7 @@ export default {
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    treeShake: true,
     theme: {
       dark: true,
       themes: {
@@ -56,7 +58,20 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3,
+          background: '#1A0E40',
+          sectionBG: '#2C0E59'
+        },
+        light: {
+          primary: '#582DD2',
+          accent: '#D02C75',
+          secondary: '#1A0E60',
+          info: '#1179F5',
+          warning: colors.amber.base,
+          error: colors.red.darken1,
+          success: '#F4812E',
+          background: '#ffffff',
+          sectionBG: '#EEEAFA'
         }
       }
     }
