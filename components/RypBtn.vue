@@ -5,8 +5,8 @@
     elevation="0"
     :to="to"
     >
+      <v-icon><slot name="btnIcon"></slot></v-icon>
       <slot name="btnText"></slot>
-      <slot name="btnIcon"></slot>
     </v-btn>
 </template>
 
@@ -25,6 +25,7 @@
   @media (min-width: 764px) {
     .custom-ryp-btn{
       min-width: 164px !important;
+      letter-spacing: normal;
     }
   }
 

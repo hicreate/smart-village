@@ -18,6 +18,7 @@
                       </template>
                     </RypBtn>
                   </div>
+                  <SocialIcons />
                 </v-col>
               </v-row>
 
@@ -34,6 +35,7 @@
 
 <script>
   import RypBtn from './RypBtn'
+  import SocialIcons from "~/components/SocialIcons";
 
   export default {
     name: 'HeroMain',
@@ -41,7 +43,8 @@
       heroSource: String
     },
     components:{
-      RypBtn
+      RypBtn,
+      SocialIcons
     }
   }
 </script>

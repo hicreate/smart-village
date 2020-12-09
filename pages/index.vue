@@ -25,7 +25,7 @@
         >Working together in the same space to share experiences, resources & collective benefits</h1>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </template>
       <template v-slot:sectionCta>
         <RypBtn to="{name: 'about'}" color="success" >
@@ -42,12 +42,13 @@
           <h1
             class="h1 mb-2"
             :style="{color: $vuetify.theme.themes[theme].fontColor}"
-          >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+          >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h1>
         </template>
         <template v-slot:sectionSub>
           <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </template>
         <template v-slot:sectionCta>
+          <DoubleButton />
         </template>
       </SectionImageRightIsolated>
 
@@ -61,13 +62,15 @@
   import SectionImageLeft from '../components/SectionImageLeft'
   import SectionImageRightIsolated from '../components/SectionImageRightIsolated'
   import RypBtn from '../components/RypBtn'
+  import DoubleButton from "~/components/DoubleButton";
 
 export default {
   components: {
     HeroMain,
     SectionImageLeft,
     RypBtn,
-    SectionImageRightIsolated
+    SectionImageRightIsolated,
+    DoubleButton
   },
   data(){
     return{

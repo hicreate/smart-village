@@ -14,7 +14,7 @@
             cols="6"
             class="d-flex align-center"
           >
-            <v-row>
+            <v-row >
               <v-col
                 cols="7"
                 class="mx-auto"
@@ -28,16 +28,18 @@
             </v-row>
           </v-col>
 
-          <!--          The image column that should sit flush on one edge on larger screen-->
+          <!--          The image column with central image widget-->
           <v-col
             cols="5"
+
           >
             <v-row>
               <v-col
                 cols="10"
                 class="mx-auto"
               >
-                <v-img :src="imageSource"></v-img>
+                <v-img
+                  :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>

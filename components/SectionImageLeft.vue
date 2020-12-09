@@ -16,7 +16,8 @@
                 cols="10"
                 class="mx-auto pb-0"
               >
-                <v-img :src="imageSource"></v-img>
+                  <v-img
+                    :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>
@@ -31,7 +32,7 @@
                 cols="8"
                 class="mx-auto"
               >
-                <div>
+                <div v-intersect="onIntersect">
                   <slot name="sectionTitle"></slot>
                   <slot name="sectionSub"></slot>
                   <slot name="sectionCta"></slot>
@@ -52,8 +53,15 @@
     props:{
       imageSource: String
     },
-    components:{
-
+    data(){
+      return{
+        imageVisible: false
+      }
+    },
+    methods:{
+      onIntersect(){
+        this.imageVisible = true
+      }
     }
   }
 </script>

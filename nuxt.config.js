@@ -38,7 +38,8 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/svg'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -75,7 +76,7 @@ export default {
           success: '#F4812E',
           background: '#1A0E40',
           altBackground:'#291471',
-          sectionBG: '#0f0a2d',
+          sectionBG: '#382092',
           brandPrimary: '#1179F5',
           fontColor: '#FFFFFF'
         }
