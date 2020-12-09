@@ -51,18 +51,21 @@ export default {
     theme: {
       dark: true,
       themes: {
-        dark: {
+        light: {
           primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
+          accent: '#D02C75',
+          secondary: '#1A0E60',
+          info: '#1179F5',
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-          background: '#1A0E40',
-          sectionBG: '#2C0E59'
+          success: '#F4812E',
+          background: '#ffffff',
+          altBackground:'#f8edff',
+          sectionBG: '#ddc5ff',
+          brandPrimary: '#1179F5',
+          fontColor: '#1A0E60'
         },
-        light: {
+        dark: {
           primary: '#582DD2',
           accent: '#D02C75',
           secondary: '#1A0E60',
@@ -70,8 +73,11 @@ export default {
           warning: colors.amber.base,
           error: colors.red.darken1,
           success: '#F4812E',
-          background: '#ffffff',
-          sectionBG: '#EEEAFA'
+          background: '#1A0E40',
+          altBackground:'#291471',
+          sectionBG: '#0f0a2d',
+          brandPrimary: '#1179F5',
+          fontColor: '#FFFFFF'
         }
       }
     }

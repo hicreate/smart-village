@@ -2,7 +2,10 @@
   <v-app id="main" :style="{background: $vuetify.theme.themes[theme].background}">
     <Header />
     <v-main>
-      <v-container>
+      <v-container
+        fluid
+        class="pa-0"
+      >
         <nuxt />
       </v-container>
     </v-main>
