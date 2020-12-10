@@ -10,7 +10,7 @@
         :to=icon.link
         :color=$vuetify.theme.themes[theme].sectionBG
       >
-        <v-icon>{{icon.icon}}</v-icon>
+        <v-icon class="ryp-social">{{icon.icon}}</v-icon>
       </v-btn>
     </div>
 </template>
@@ -62,5 +62,7 @@
 </script>
 
 <style scoped>
-
+.ryp-social:hover{
+  color: #F4812E;
+}
 </style>

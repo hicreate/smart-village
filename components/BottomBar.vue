@@ -51,4 +51,8 @@
     text-decoration: none;
   }
 
+  .credit-link:hover{
+    color: #F4812E;
+  }
+
 </style>

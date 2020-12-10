@@ -16,13 +16,13 @@
       </template>
     </HeroMain>
 
-<!--    component with image left and content righ-->
-    <SectionImageLeft image-source="/images/section-webready.png">
+<!--    component with image left and content right-->
+    <SectionImageLeft image-loc="bottom" image-source="/images/section-webready.png">
       <template v-slot:sectionTitle>
-        <h1
+        <h2
           class="h1 mb-2"
           :style="{color: $vuetify.theme.themes[theme].fontColor}"
-        >Working together in the same space to share experiences, resources & collective benefits</h1>
+        >Working together in the same space to share experiences, resources & collective benefits</h2>
       </template>
       <template v-slot:sectionSub>
         <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -36,13 +36,14 @@
       </template>
     </SectionImageLeft>
 
+<!--    section in a lighter frame-->
     <div :style="{background: $vuetify.theme.themes[theme].altBackground}">
       <SectionImageRightIsolated image-source="/images/comp-user.png">
         <template v-slot:sectionTitle>
-          <h1
+          <h2
             class="h1 mb-2"
             :style="{color: $vuetify.theme.themes[theme].fontColor}"
-          >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h1>
+          >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h2>
         </template>
         <template v-slot:sectionSub>
           <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -51,8 +52,27 @@
           <DoubleButton />
         </template>
       </SectionImageRightIsolated>
-
     </div>
+
+<!--    bottom section-->
+    <SectionImageLeft image-loc="center" image-source="images/ryp8-iso.png">
+      <template v-slot:sectionTitle>
+        <h2
+          class="h1 mb-2"
+          :style="{color: $vuetify.theme.themes[theme].fontColor}"
+        >Sign up for a free account to access members only resources</h2>
+      </template>
+      <template v-slot:sectionSub>
+        <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </template>
+      <template v-slot:sectionCta>
+        <RypBtn :to="{name: 'sign-up'}" color="success" >
+          <template v-slot:btnText>
+            <span>sign up</span>
+          </template>
+        </RypBtn>
+      </template>
+    </SectionImageLeft>
   </div>
 </template>
 
@@ -84,3 +104,15 @@ export default {
   }
 }
 </script>
+
+<style>
+  h1{
+    font-size: 3em !important;
+    line-height: 1.2em;
+  }
+
+  h2{
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+</style>

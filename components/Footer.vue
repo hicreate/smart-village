@@ -1,5 +1,5 @@
 <template>
-  <v-row class="pb-10">
+  <v-row class="pb-10 ryp-footer">
     <v-col
     cols="10"
     class="mx-auto pt-10"
@@ -52,5 +52,8 @@
 </script>
 
 <style scoped>
-
+.ryp-footer{
+  -webkit-box-shadow: 0px -5px 9px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px -5px 9px 0px rgba(0,0,0,0.05);
+}
 </style>
