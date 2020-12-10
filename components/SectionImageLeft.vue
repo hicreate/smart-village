@@ -29,7 +29,7 @@
           >
             <v-row>
               <v-col
-                cols="8"
+                cols="7"
                 class="mx-auto"
               >
                 <div v-intersect="onIntersect">

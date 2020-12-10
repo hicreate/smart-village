@@ -1,13 +1,12 @@
 <template>
     <div
-    class="pt-5"
     >
       <v-btn
         text
         fab
         small
         v-for="icon in icons"
-        :key="icon"
+        :key="icon.id"
         :to=icon.link
         :color=$vuetify.theme.themes[theme].sectionBG
       >
@@ -23,21 +22,25 @@
       return{
         icons:[
           {
+            id: 1,
             name: 'Facebook',
             link: '#',
             icon: 'mdi-facebook'
           },
           {
+            id: 2,
             name: 'Twitter',
             link: '#',
             icon: 'mdi-twitter'
           },
           {
+            id: 3,
             name: 'Instagram',
             link: '#',
             icon: 'mdi-instagram'
           },
           {
+            id: 4,
             name: 'Linkedin',
             link: '#',
             icon: 'mdi-linkedin'

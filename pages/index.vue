@@ -28,7 +28,7 @@
         <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </template>
       <template v-slot:sectionCta>
-        <RypBtn to="{name: 'about'}" color="success" >
+        <RypBtn :to="{name: 'about'}" color="success" >
           <template v-slot:btnText>
             <span>about the project</span>
           </template>

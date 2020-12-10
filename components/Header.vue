@@ -7,13 +7,7 @@
     elevate-on-scroll
     extended
   >
-    <div>
-      <h2 :class="headingColor"
-          class="font-weight-black">Smart Village Scotland</h2>
-      <h3
-          :class="subColor"
-          class="font-weight-light mt-n2">Rural Youth Project</h3>
-    </div>
+    <LogoText />
     <v-spacer></v-spacer>
     <!--    menu items go here-->
     <div class="d-flex flex-row align-center">
@@ -21,7 +15,7 @@
         v-for="link in menuLinks"
         :key="link.id"
       >
-      <HeaderButton :text="link.text" :link="link"/>
+      <HeaderButton class="ryp-head-btn" :text="link.text" :link="link"/>
       </div>
       <div>
         <RypBtn :to="{name: 'members-area'}" color="success">
@@ -38,24 +32,23 @@
       <div class="pl-8">
         <DarkMode />
       </div>
-
     </div>
-
   </v-app-bar>
-
 </template>
 
 <script>
   import HeaderButton from './HeaderButton'
   import DarkMode from './DarkMode'
   import RypBtn from './RypBtn'
+  import LogoText from './LogoText'
 
   export default {
     name: 'Header',
     components: {
       HeaderButton,
       DarkMode,
-      RypBtn
+      RypBtn,
+      LogoText
     },
     data(){
       return{
@@ -103,6 +96,9 @@
 </script>
 
 <style scoped>
+  .ryp-head-btn{
+    letter-spacing: normal;
+  }
 
 
 </style>

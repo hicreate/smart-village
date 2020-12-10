@@ -9,15 +9,21 @@
         <nuxt />
       </v-container>
     </v-main>
+    <Footer />
+    <BottomBar />
   </v-app>
 </template>
 
 <script>
   import Header from '../components/Header.vue'
+  import Footer from '../components/Footer.vue'
+  import BottomBar from '../components/BottomBar'
 
 export default {
     components:{
-      Header
+      Header,
+      Footer,
+      BottomBar
     },
   data () {
     return {

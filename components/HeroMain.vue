@@ -18,11 +18,11 @@
                       </template>
                     </RypBtn>
                   </div>
-                  <SocialIcons />
+                  <div class="pt-5">
+                    <SocialIcons />
+                  </div>
                 </v-col>
               </v-row>
-
-
             </v-col>
             <v-col cols="7" class="pr-0">
               <v-img :src="heroSource"></v-img>
