@@ -1,22 +1,26 @@
 <template>
     <v-row class="ryp-bb">
       <v-col
-      cols="10"
+      lg="10"
       class="mx-auto"
       >
-        <v-row>
+        <v-row
+          :class="{'': $vuetify.breakpoint.mdAndUp, 'd-flex flex-column': $vuetify.breakpoint.smAndDown}"
+        >
           <v-col
-          cols="4"
-          class="d-flex flex-row align-center justify-start"
+          lg="4"
+          class="d-flex flex-row align-center"
+          :class="{'justify-start': $vuetify.breakpoint.mdAndUp, 'justify-center': $vuetify.breakpoint.smAndDown}"
           >
               <p class="caption mb-0">Website designed & hosted by <a class="credit-link" target="_blank" href="https://hicreate.co.uk">hi.create</a></p>
           </v-col>
           <v-col
-          cols="8"
-          class="d-flex flex-row align-center justify-end"
+          lg="8"
+          class="align-center justify-end d-flex"
+          :class="{'flex-row': $vuetify.breakpoint.mdAndUp, 'flex-column': $vuetify.breakpoint.smAndDown}"
           >
               <p class="caption mb-0">Copyright © {{this.currentYear}} Rural Youth Project</p>
-              <SocialIcons class="ml-5" />
+              <SocialIcons class="ml-lg-5" />
           </v-col>
         </v-row>
       </v-col>

@@ -4,11 +4,11 @@
         <v-col cols="12">
           <v-row>
             <v-col
-              cols="5"
+              lg="5"
               class="d-flex align-center"
             >
               <v-row>
-                <v-col class="mx-auto" cols="9">
+                <v-col class="mx-auto" lg="9">
                   <div>
                     <slot name="heroTitle"></slot>
                     <slot name="heroSub"></slot>
@@ -24,7 +24,7 @@
                 </v-col>
               </v-row>
             </v-col>
-            <v-col cols="7" class="pr-0">
+            <v-col lg="7" class="pr-0">
               <v-img :src="heroSource"></v-img>
             </v-col>
           </v-row>

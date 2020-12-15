@@ -52,4 +52,17 @@ export default {
   .ryp-btn:hover:before{
     opacity: 0 !important;
   }
+
+  @media(min-width:764px){
+    h1{
+      font-size: 3em !important;
+      line-height: 1.2em;
+    }
+
+    h2{
+      font-size: 2em;
+      line-height: 1.2em;
+    }
+  }
+
 </style>

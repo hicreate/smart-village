@@ -7,9 +7,12 @@
       <v-row>
         <v-col
           lg="6"
+          :class="{'': $vuetify.breakpoint.smAndDown, 'px-5': $vuetify.breakpoint.smAndDown}"
         >
           <LogoText />
-          <ContactCard class="mt-10" />
+          <ContactCard
+            class="mt-10"
+          />
         </v-col>
         <v-col
           lg="3"

@@ -1,93 +1,105 @@
 <template>
   <v-app-bar
     app
-    class="px-5 pt-5 pb-10"
+    :class="{'': $vuetify.breakpoint.smAndDown, 'px-5 pt-5 pb-10': $vuetify.breakpoint.mdAndUp}"
     fixed
     :color=$vuetify.theme.themes[theme].background
     elevate-on-scroll
     extended
   >
     <LogoText />
-    <v-spacer></v-spacer>
-    <!--    menu items go here-->
-    <div class="d-flex flex-row align-center">
-      <v-btn
-        exact
-        text
-        v-bind="attrs"
-        v-on="on"
-        active-class="ryp-ac"
-        class="ryp-head-btn ryp-btn"
-        :to="{name: 'index'}"
-      >home</v-btn>
+    <v-spacer
+      :class="{'d-none': $vuetify.breakpoint.smAndDown, '': $vuetify.breakpoint.mdAndUp}"
+    ></v-spacer>
+    <div
+      :class="{'d-none': $vuetify.breakpoint.smAndDown, '': $vuetify.breakpoint.mdAndUp}"
+    >
+      <!--    menu items go here-->
 
-<!--      dropdown menu for about-->
-      <v-menu
-        open-on-hover
-        offset-y
+      <div
+        class="d-flex flex-row align-center"
       >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            exact
-            text
-            v-bind="attrs"
-            v-on="on"
-            active-class="ryp-ac"
-            class="ryp-head-btn ryp-btn"
-            :to="{name: 'about'}"
-          >about</v-btn>
-        </template>
-        <v-list
-          :color=$vuetify.theme.themes[theme].background
+        <v-btn
+          exact
+          text
+          v-bind="attrs"
+          v-on="on"
+          active-class="ryp-ac"
+          class="ryp-head-btn ryp-btn"
+          :to="{name: 'index'}"
+        >home</v-btn>
+
+        <!--      dropdown menu for about-->
+        <v-menu
+          open-on-hover
+          offset-y
         >
-          <v-list-item
-            active-class="ryp-ac"
-            exact
-            href="/about/digital-champions">
-            <v-list-item-title class="body-2">digital champions</v-list-item-title>
-          </v-list-item>
-          <v-list-item
-            active-class="ryp-ac"
-            exact
-            href="/about/how-we-work"
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              exact
+              text
+              v-bind="attrs"
+              v-on="on"
+              active-class="ryp-ac"
+              class="ryp-head-btn ryp-btn"
+              :to="{name: 'about'}"
+            >about</v-btn>
+          </template>
+          <v-list
+            :color=$vuetify.theme.themes[theme].background
           >
-            <v-list-item-title class="body-2">how we work</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
+            <v-list-item
+              active-class="ryp-ac"
+              exact
+              href="/about/digital-champions">
+              <v-list-item-title class="body-2">digital champions</v-list-item-title>
+            </v-list-item>
+            <v-list-item
+              active-class="ryp-ac"
+              exact
+              href="/about/how-we-work"
+            >
+              <v-list-item-title class="body-2">how we work</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
 
-      <v-btn
-        text
-        v-bind="attrs"
-        v-on="on"
-        active-class="ryp-ac"
-        class="ryp-head-btn ryp-btn"
-        :to="{name: 'resources'}"
-      >resources</v-btn>
+        <v-btn
+          text
+          v-bind="attrs"
+          v-on="on"
+          active-class="ryp-ac"
+          class="ryp-head-btn ryp-btn"
+          :to="{name: 'resources'}"
+        >resources</v-btn>
 
-      <v-btn
-        text
-        v-bind="attrs"
-        v-on="on"
-        active-class="ryp-ac"
-        class="ryp-head-btn ryp-btn"
-        :to="{name: 'news'}"
-      >news & updates</v-btn>
+        <v-btn
+          text
+          v-bind="attrs"
+          v-on="on"
+          active-class="ryp-ac"
+          class="ryp-head-btn ryp-btn"
+          :to="{name: 'news'}"
+        >news & updates</v-btn>
 
+      </div>
+      <div>
+        <RypBtn :to="{name: 'members-area'}" color="success">
+          <template v-slot:btnText>
+            members area
+          </template>
+        </RypBtn>
+        <RypBtn :to="{name: 'sign-up'}" color="accent">
+          <template v-slot:btnText>
+            sign up
+          </template>
+        </RypBtn>
+      </div>
     </div>
-    <div>
-      <RypBtn :to="{name: 'members-area'}" color="success">
-        <template v-slot:btnText>
-          members area
-        </template>
-      </RypBtn>
-      <RypBtn :to="{name: 'sign-up'}" color="accent">
-        <template v-slot:btnText>
-          sign up
-        </template>
-      </RypBtn>
-    </div>
-    <div class="pl-8">
+
+    <div
+      :class="{'d-none': $vuetify.breakpoint.smAndDown, '': $vuetify.breakpoint.mdAndUp}"
+      class="pl-8">
       <DarkMode />
     </div>
   </v-app-bar>

@@ -106,13 +106,5 @@ export default {
 </script>
 
 <style>
-  h1{
-    font-size: 3em !important;
-    line-height: 1.2em;
-  }
 
-  h2{
-    font-size: 2em;
-    line-height: 1.2em;
-  }
 </style>
