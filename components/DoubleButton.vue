@@ -1,8 +1,15 @@
 <template>
   <div>
    <v-row>
-     <v-col class="d-flex flex-row">
-       <RypBtn class="mr-5" :to="{name: 'resources'}" color="success">
+     <v-col
+       :class="{'d-flex flex-row': $vuetify.breakpoint.mdAndUp, 'd-flex flex-column': $vuetify.breakpoint.smAndDown}"
+     >
+       <RypBtn
+         :class="{'mr-5': $vuetify.breakpoint.mdAndUp, 'mb-3': $vuetify.breakpoint.smAndDown}"
+         :to="{name: 'resources'}"
+         color="success"
+
+       >
          <template v-slot:btnText>
            <span>get FREE resources</span>
          </template>

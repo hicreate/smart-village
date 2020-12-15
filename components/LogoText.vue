@@ -27,5 +27,14 @@
 </script>
 
 <style scoped>
+  @media(max-width: 764px){
+    h3{
+      font-size: 1em;
+    }
+
+    h2{
+      font-size: 1em;
+    }
+  }
 
 </style>

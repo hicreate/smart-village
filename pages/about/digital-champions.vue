@@ -12,7 +12,7 @@
             <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </template>
           <template v-slot:sectionCta>
-            <RypBtn color="success" >
+            <RypBtn color="success" @rypBtnClick="scrollChamps" >
               <template v-slot:btnText>
                 <span>meet the champions</span>
               </template>
@@ -38,7 +38,7 @@
                     lg="10"
                     class="mx-auto"
                   >
-                    <DchampTiles></DchampTiles>
+                    <DchampTiles id="dchamps"></DchampTiles>
                   </v-col>
                 </v-row>
               </v-col>
@@ -58,6 +58,11 @@
     components:{
       DchampTiles,
       SectionImageRight
+    },
+    methods:{
+      scrollChamps(){
+        this.$vuetify.goTo('#dchamps')
+      }
     },
     computed:{
       theme () {

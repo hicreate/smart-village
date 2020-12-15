@@ -1,6 +1,6 @@
 <template>
-  <v-app id="main" :style="{background: $vuetify.theme.themes[theme].background}">
-    <Header />
+  <v-app style="overflow:hidden" id="main" :style="{background: $vuetify.theme.themes[theme].background}">
+    <Header :class="{'': $vuetify.breakpoint.mdAndUp, 'py-5': $vuetify.breakpoint.smAndDown}" />
     <v-main>
       <v-container
         fluid

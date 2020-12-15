@@ -9,10 +9,10 @@
   >
     <LogoText />
     <v-spacer
-      :class="{'d-none': $vuetify.breakpoint.smAndDown, '': $vuetify.breakpoint.mdAndUp}"
+
     ></v-spacer>
     <div
-      :class="{'d-none': $vuetify.breakpoint.smAndDown, '': $vuetify.breakpoint.mdAndUp}"
+      :class="{'d-none': $vuetify.breakpoint.smAndDown, 'd-flex': $vuetify.breakpoint.mdAndUp}"
     >
       <!--    menu items go here-->
 
@@ -98,7 +98,6 @@
     </div>
 
     <div
-      :class="{'d-none': $vuetify.breakpoint.smAndDown, '': $vuetify.breakpoint.mdAndUp}"
       class="pl-8">
       <DarkMode />
     </div>

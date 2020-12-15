@@ -1,13 +1,19 @@
 <template>
     <div class="top-hero">
-      <v-row class="mt-lg-15">
-        <v-col cols="12">
-          <v-row>
+      <v-row
+        class=""
+        :class="{'mt-15': $vuetify.breakpoint.mdAndUp, 'mt-5 pl-5': $vuetify.breakpoint.smAndDown}"
+      >
+        <v-col
+          cols="12">
+          <v-row class="d-flex">
             <v-col
               lg="5"
-              class="d-flex align-center"
+              class="d-flex align-center hero-head-left"
             >
-              <v-row>
+              <v-row
+                :class="{'': $vuetify.breakpoint.mdAndUp, 'pr-5': $vuetify.breakpoint.smAndDown}"
+              >
                 <v-col class="mx-auto" lg="9">
                   <div>
                     <slot name="heroTitle"></slot>
@@ -24,8 +30,8 @@
                 </v-col>
               </v-row>
             </v-col>
-            <v-col lg="7" class="pr-0">
-              <v-img :src="heroSource"></v-img>
+            <v-col lg="7" class="pr-0 hero-head-right">
+              <v-img contain :src="heroSource"></v-img>
             </v-col>
           </v-row>
         </v-col>
@@ -51,8 +57,23 @@
 
 <style scoped>
   .top-hero h1{
-    font-size: 3em !important;
+    font-size: 3em;
     line-height: 1.2em;
+  }
+
+  @media(max-width: 763px){
+    .hero-head-right{
+      order: 1;
+    }
+
+    .hero-head-left{
+      order: 2;
+    }
+
+    .top-hero h1{
+      font-size: 2em;
+    }
+
   }
 
 </style>

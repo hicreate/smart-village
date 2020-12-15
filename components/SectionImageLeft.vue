@@ -19,6 +19,8 @@
               >
                 <slot name="addImage"></slot>
                   <v-img
+                    max-width=""
+                    class="ryp-left-img"
                     :src="imageSource"></v-img>
               </v-col>
             </v-row>
@@ -89,4 +91,10 @@ h2{
   font-size: 2em;
   line-height: 1.2em;
 }
+
+  @media(max-width:763px){
+    .ryp-left-image .v-responsive__content{
+
+    }
+  }
 </style>

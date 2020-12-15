@@ -4,6 +4,7 @@
     :color="color"
     elevation="0"
     :to="to"
+    @click="btnClicked"
     >
       <v-icon><slot name="btnIcon"></slot></v-icon>
       <slot name="btnText"></slot>
@@ -16,6 +17,11 @@
     props:{
       to: Object,
       color: String
+    },
+    methods:{
+      btnClicked(){
+        this.$emit('rypBtnClick')
+      }
     }
   }
 </script>
