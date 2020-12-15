@@ -11,12 +11,12 @@
 
           <!--The content section, load in buttons as required using the last slot-->
           <v-col
-            cols="6"
+            lg="6"
             class="d-flex align-center"
           >
             <v-row >
               <v-col
-                cols="7"
+                lg="7"
                 class="mx-auto"
               >
                 <div>
@@ -30,12 +30,12 @@
 
           <!--          The image column with central image widget-->
           <v-col
-            cols="5"
+            lg="5"
 
           >
             <v-row>
               <v-col
-                cols="10"
+                lg="10"
                 class="mx-auto"
               >
                 <v-img

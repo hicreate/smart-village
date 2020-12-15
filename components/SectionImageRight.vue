@@ -3,19 +3,19 @@
     <v-row class="mt-lg-15">
 
       <v-col
-        cols="12"
+        lg="12"
         class="pb-0"
       >
         <v-row>
 
           <!--The content section, load in buttons as required using the last slot-->
           <v-col
-            cols="6"
+            lg="6"
             class="d-flex align-center"
           >
             <v-row>
               <v-col
-                cols="7"
+                lg="7"
                 class="mx-auto"
               >
                 <div v-intersect="onIntersect">
@@ -29,13 +29,16 @@
 
           <!--          The image column that should sit flush on one edge on larger screen-->
           <v-col
-            cols="6"
+            lg="6"
             class="pb-0"
           >
-            <v-row>
+            <v-row
+              :class="imageEdge"
+            >
               <v-col
-                cols="10"
-                class="mx-auto pb-0"
+                lg="10"
+                class=""
+                :class="imageEdge"
               >
                 <v-img
                   :src="imageSource"></v-img>
@@ -55,7 +58,8 @@
   export default {
     name: 'SectionImageRight',
     props:{
-      imageSource: String
+      imageSource: String,
+      imageLoc: String
     },
     data(){
       return{
@@ -65,6 +69,21 @@
     methods:{
       onIntersect(){
         this.imageVisible = true
+      }
+    },
+    computed:{
+      imageEdge(){
+        let x;
+
+        if(this.imageLoc === "bottom"){
+          x = "pb-0 mx-auto"
+        } else if(this.imageLoc === "right"){
+          x = "pr-0 justify-end"
+        } else {
+          x = "d-flex justify-center align-center mx-auto"
+        }
+
+        return x;
       }
     }
   }

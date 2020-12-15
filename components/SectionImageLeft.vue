@@ -3,19 +3,21 @@
     <v-row class="mt-lg-15">
       <!--          The image column that should sit flush on one edge on larger screen-->
       <v-col
-        cols="12"
+        lg="12"
         class="pb-0 mx-auto"
       >
         <v-row>
           <v-col
-            cols="6"
+            lg="6"
             :class="imageEdge"
           >
             <v-row>
               <v-col
-                cols="10"
+                lg="10"
                 :class="imageEdge"
+                style="position:relative;"
               >
+                <slot name="addImage"></slot>
                   <v-img
                     :src="imageSource"></v-img>
               </v-col>
@@ -24,13 +26,13 @@
 
           <!--The content section, load in buttons as required using the last slot-->
           <v-col
-            cols="6"
+            lg="6"
             class="d-flex align-center"
           >
             <v-row>
               <v-col
-                cols="7"
-                class="mx-auto"
+                lg="7"
+                class="mr-10 ml-5"
               >
                 <div v-intersect="onIntersect">
                   <slot name="sectionTitle"></slot>

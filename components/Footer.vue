@@ -1,23 +1,23 @@
 <template>
   <v-row class="pb-10 ryp-footer">
     <v-col
-    cols="10"
+    lg="10"
     class="mx-auto pt-10"
     >
       <v-row>
         <v-col
-          cols="6"
+          lg="6"
         >
           <LogoText />
           <ContactCard class="mt-10" />
         </v-col>
         <v-col
-          cols="3"
+          lg="3"
         >
           <UsefulLinks />
         </v-col>
         <v-col
-          cols="3"
+          lg="3"
         >
           <QuickLinks />
         </v-col>

@@ -29,10 +29,10 @@
       </template>
       <template v-slot:sectionCta>
         <RypBtn :to="{name: 'about'}" color="success" >
-          <template v-slot:btnText>
-            <span>about the project</span>
-          </template>
-        </RypBtn>
+        <template v-slot:btnText>
+          <span>about the project</span>
+        </template>
+      </RypBtn>
       </template>
     </SectionImageLeft>
 

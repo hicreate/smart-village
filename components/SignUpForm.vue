@@ -11,11 +11,14 @@
           create a FREE account
         </v-card-title>
         <v-card-text>
-          create a free Smart Village accounttoday to access
-          members only resources and to leverage the full benefits
-          available from the Smart Village platform.
+          smart village Scotland is still in
+          the launch phase with full member functionality
+          coming soon. In the meantime, sign up below to
+          register your account for when full access goes live!
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions
+        class="d-flex flex-column"
+        >
           <v-form
           class="full-width"
           >
@@ -63,15 +66,42 @@
               full-width
             >
             </v-text-field>
+            <v-checkbox
+            label="I agree for my details to be processed in accordance with the privacy policy."
+            ></v-checkbox>
           </v-form>
+          <div class="d-flex justify-space-around full-width">
+            <RypBtn :to="{name: '#'}" color="success" >
+              <template v-slot:btnText>
+                <span>register account</span>
+              </template>
+            </RypBtn>
+            <v-btn
+              class="text-lowercase"
+            medium
+            text
+            :to="{name: 'members-area'}"
+            >
+              or, sign in
+            </v-btn>
+          </div>
         </v-card-actions>
+        <v-img
+          class="contact-box-img"
+          max-width="128px"
+          src="/images/speech-bubble.png"></v-img>
       </v-card>
     </div>
 </template>
 
 <script>
+  import RypBtn from './RypBtn'
+
     export default {
         name: "SignUpForm",
+      components:{
+          RypBtn
+      },
       data(){
           return{
 
@@ -99,6 +129,12 @@
 
   .full-width{
     width: 100% !important;
+  }
+
+  .contact-box-img{
+    position: absolute;
+    bottom: -65px;
+    right: -30px;
   }
 
 </style>
