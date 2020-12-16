@@ -21,7 +21,6 @@
         </SectionImageRight>
       </div>
 
-
       <div :style="{background: $vuetify.theme.themes[theme].altBackground}">
         <v-row>
           <v-col

@@ -65,4 +65,8 @@ export default {
     }
   }
 
+  h1, h2{
+    line-height: 1.2em;
+  }
+
 </style>

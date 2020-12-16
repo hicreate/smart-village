@@ -28,7 +28,7 @@
 
 <style scoped>
   /*Larger Devices*/
-  @media (min-width: 764px) {
+  @media (min-width: 1300px) {
     .custom-ryp-btn{
       min-width: 164px !important;
       letter-spacing: normal;
