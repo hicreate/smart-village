@@ -45,6 +45,15 @@ export default {
   .ryp-ac:before{
     opacity: 0 !important;
   }
+
+  .ryp-ac:active{
+    opacity: 0 !important;
+  }
+
+  .ryp-head-byn:active{
+    opacity: 0 !important;
+  }
+
   .ryp-btn:before:hover{
     opacity: 0 !important;
   }
@@ -67,6 +76,10 @@ export default {
 
   h1, h2{
     line-height: 1.2em;
+  }
+
+  #test-slider .v-carousel__controls{
+    background-color: rgba(0, 0, 0, 0) !important;
   }
 
 </style>

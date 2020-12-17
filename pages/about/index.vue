@@ -76,16 +76,23 @@
     <div
       :style="{background: $vuetify.theme.themes[theme].brandPrimary}"
     >
-<h3>Placeholder</h3>
+      <v-row>
+        <v-col
+        lg="10"
+        class="mx-auto"
+        >
+          <Testimonial />
+        </v-col>
+      </v-row>
     </div>
 
     <div class="py-15">
       <SectionImageRight image-loc="right" image-source="/images/header-hero-05-min.png">
         <template v-slot:sectionTitle>
-          <h1
-            class="h1 mb-2"
+          <h2
+            class="mb-2"
             :style="{color: $vuetify.theme.themes[theme].fontColor}"
-          >Like what you see? Become a member for FREE today</h1>
+          >Like what you see? Become a member for FREE today</h2>
         </template>
         <template v-slot:sectionSub>
           <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -99,19 +106,20 @@
         </template>
       </SectionImageRight>
     </div>
-
   </div>
 </template>
 
 <script>
   import RypBtn from "~/components/RypBtn"
   import SectionImageLeft from '~/components/SectionImageLeft'
+  import Testimonial from '../../components/Testimonial'
 
   export default {
     name: 'about',
     components:{
       RypBtn,
       SectionImageLeft,
+      Testimonial
     },
     computed:{
       theme () {
@@ -146,4 +154,7 @@
   .logo-box{
     border-radius: 15px;
   }
+
+
+
 </style>

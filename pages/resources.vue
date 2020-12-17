@@ -68,10 +68,10 @@
     <SectionImageLeft image-loc="left" image-source="/images/resources.png">
       <template v-slot:sectionTitle>
         <h2
-          class="h1 mb-2"
+          class="h1 mb-2 overtop"
           :style="{color: $vuetify.theme.themes[theme].fontColor}"
         >Free resources</h2>
-        <h3 class="font-weight-light">
+        <h3 class="font-weight-light overtop">
           Sign up, create an account and start to realise
           you’re businesses full potential alongside
           likeminded young business owners across
@@ -79,13 +79,13 @@
         </h3>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="font-weight-light overtop">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
       </template>
       <template v-slot:sectionCta>
         <h4 class="font-weight-bold">sign in to access additional members-only resources, sign in <a href="/members-area">here</a></h4>
       </template>
       <template v-slot:addImage>
-        <v-img class="ryp-over-image" max-width="500px" src="/images/iconsFly2.png"></v-img>
+<!--        <v-img class="ryp-over-image" max-width="500px" src="/images/iconsFly2.png"></v-img>-->
       </template>
     </SectionImageLeft>
   </div>
@@ -149,7 +149,11 @@
   .ryp-over-image{
     position: absolute;
     z-index: 1;
-    right: -280px;
+    right: -200px;
     top: -100px;
+  }
+
+  .overtop{
+    z-index: 2 !important;
   }
 </style>
