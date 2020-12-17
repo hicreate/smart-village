@@ -62,6 +62,10 @@ export default {
     opacity: 0 !important;
   }
 
+  #ryp-main-nav .v-btn--active:before{
+    opacity: 0 !important;
+  }
+
   @media(min-width:764px){
     h1{
       font-size: 3em !important;

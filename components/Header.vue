@@ -13,6 +13,7 @@
     ></v-spacer>
     <div
       :class="{'d-none': $vuetify.breakpoint.smAndDown, 'd-flex': $vuetify.breakpoint.mdAndUp}"
+      id="ryp-main-nav"
     >
       <!--    menu items go here-->
 
