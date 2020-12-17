@@ -2,7 +2,7 @@
     <div>
       <v-card
       elevation="0"
-      class="pa-10 mx-auto rounded-xl"
+      class="mx-auto rounded-xl pa-md-5 pa-sm-5"
       :class="borderColor"
       :color=$vuetify.theme.themes[theme].altBackground
       max-width="500px"
@@ -70,7 +70,10 @@
             label="I agree for my details to be processed in accordance with the privacy policy."
             ></v-checkbox>
           </v-form>
-          <div class="d-flex justify-space-around full-width">
+          <div
+            class="d-flex justify-space-around full-width"
+            :class="{'flex-column': $vuetify.breakpoint.smAndDown, 'flex-row': $vuetify.breakpoint.mdAndUp}"
+          >
             <RypBtn :to="{name: '#'}" color="success" >
               <template v-slot:btnText>
                 <span>register account</span>

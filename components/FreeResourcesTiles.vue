@@ -18,6 +18,7 @@
               </v-row>
               <v-row>
                 <v-col
+                  cols="12"
                   lg="3"
                   v-for="(resource, i) in resources"
                   :key="i"

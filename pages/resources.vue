@@ -12,9 +12,13 @@
           lg="10"
           class="mx-auto"
           >
-            <v-row>
+            <v-row
+            class="d-flex"
+            >
               <v-col
                 lg="5"
+                class="ryp-col-left"
+                :class="{'mt-10': $vuetify.breakpoint.smAndDown}"
               >
                 <v-img max-width="240px" src="/images/cogs.png"></v-img>
                 <h2
@@ -26,12 +30,17 @@
                   <ul>
                     <li>signup using the adjacent form</li>
                     <li>your registration will be received and reviewed</li>
-                    <li>if approved, we'll send you details on accesing your account</li>
+                    <li>if approved, we'll send you details to access your account</li>
                   </ul>
                 </div>
 
-                <div class="mt-10">
-                  <RypBtn class="mr-5" :to="{name: 'resources'}" color="info">
+                <div
+                  class="mt-4 d-flex"
+                  :class="{'text-center flex-column': $vuetify.breakpoint.smAndDown}"
+                >
+                  <RypBtn
+                    :class="{'mb-5': $vuetify.breakpoint.smAndDown, 'mr-5': $vuetify.breakpoint.mdAndUp}"
+                    :to="{name: 'resources'}" color="info">
                     <template v-slot:btnText>
                       <span>FREE resources</span>
                     </template>
@@ -39,7 +48,7 @@
                       mdi-file-document
                     </template>
                   </RypBtn>
-                  <RypBtn class="mr-5" :to="{name: 'members-area'}" color="accent">
+                  <RypBtn class="mr-md-5" :to="{name: 'members-area'}" color="accent">
                     <template v-slot:btnText>
                       <span>members area</span>
                     </template>
@@ -51,6 +60,7 @@
               </v-col>
               <v-col
                 lg="7"
+                class="ryp-col-right"
               >
                 <SignUpForm />
               </v-col>
@@ -135,6 +145,15 @@
     computed:{
       theme () {
         return (this.$vuetify.theme.dark) ? 'dark' : 'light'
+      },
+      size(){
+        let isMobile;
+        if(this.$vuetify.breakpoint.smAndDown){
+          isMobile = true;
+        } else {
+          isMobile = false;
+        }
+        return isMobile;
       }
     }
   }
@@ -142,8 +161,8 @@
 
 <style scoped>
   .extra-height{
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
   .ryp-over-image{
@@ -155,5 +174,15 @@
 
   .overtop{
     z-index: 2 !important;
+  }
+
+  @media(max-width:764px){
+    .ryp-col-left{
+      order: 2;
+    }
+
+    .ryp-col-right{
+      order: 1;
+    }
   }
 </style>
