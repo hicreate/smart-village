@@ -66,6 +66,10 @@ export default {
     opacity: 0 !important;
   }
 
+  .ryp-head-btn:before{
+    background-color: transparent !important;
+  }
+
   @media(min-width:764px){
     h1{
       font-size: 3em !important;

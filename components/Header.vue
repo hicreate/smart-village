@@ -23,12 +23,11 @@
         <v-btn
           exact
           text
-          v-bind="attrs"
-          v-on="on"
           active-class="ryp-ac"
           class="ryp-head-btn ryp-btn"
           :to="{name: 'index'}"
         >home</v-btn>
+
 
         <!--      dropdown menu for about-->
         <v-menu
