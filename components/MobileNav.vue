@@ -67,6 +67,7 @@
             v-if="!tile.hasChildren"
             :key="tile.title"
             @click="sheet = false"
+            :nuxt="true"
           >
             <v-list-item-avatar
             >
@@ -83,7 +84,7 @@
 <!--          the group to show if children are present-->
           <v-list-group
             v-else
-            :value="true"
+            :value="false"
             no-action
           >
             <template v-slot:activator>
@@ -104,7 +105,9 @@
             <v-list-item
               v-for="(child, i) in tile.children"
               :key="i"
-              link
+              @click="sheet = false"
+              :to="{name: 'about-digital-champions' }"
+              :nuxt="true"
             >
               <v-list-item-avatar
               tile
@@ -148,12 +151,12 @@
                   {
                     icon: 'mdi-medal',
                     title: 'digital champions',
-                    to: 'about/digital-champions'
+                    to: 'about-digital-champions'
                   },
                   {
                     icon: 'mdi-comment-question-outline',
                     title: 'how we work',
-                    to: 'about/how-we-work'
+                    to: 'how-we-work'
                   },
                 ]
               },
