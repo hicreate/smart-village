@@ -35,9 +35,8 @@
                 <v-row>
                   <v-col
                     lg="10"
-                    class="mx-auto"
                   >
-                    <DchampTiles id="dchamps"></DchampTiles>
+                    <DchampTiles :champs="champions" id="dchamps"></DchampTiles>
                   </v-col>
                 </v-row>
               </v-col>
@@ -51,6 +50,7 @@
 <script>
   import DchampTiles from '../../components/DchampTiles'
   import SectionImageRight from '../../components/SectionImageRight'
+  import {mapState} from 'vuex'
 
   export default {
     name: 'digital-champions',
@@ -66,8 +66,21 @@
     computed:{
       theme () {
         return (this.$vuetify.theme.dark) ? 'dark' : 'light'
+      },
+      ...mapState({
+        champions: state => state.champions.champions
+      })
+    },
+    async fetch ({store, error}) {
+      try{
+        await store.dispatch('champions/fetchChamps')
+      } catch(e){
+        error({
+          statusCode: 503,
+          message: 'Unable to fetch Champion data at this time'
+        })
       }
-    }
+    },
   }
 </script>
 

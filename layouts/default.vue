@@ -11,6 +11,7 @@
     </v-main>
     <Footer />
     <BottomBar />
+    <MobileNav v-show="$vuetify.breakpoint.smAndDown" />
   </v-app>
 </template>
 
@@ -18,12 +19,14 @@
   import Header from '../components/Header.vue'
   import Footer from '../components/Footer.vue'
   import BottomBar from '../components/BottomBar'
+  import MobileNav from '../components/MobileNav'
 
 export default {
     components:{
       Header,
       Footer,
-      BottomBar
+      BottomBar,
+      MobileNav
     },
   data () {
     return {
@@ -72,7 +75,7 @@ export default {
 
   @media(min-width:764px){
     h1{
-      font-size: 3em !important;
+      font-size: 2.2em !important;
       line-height: 1.2em;
     }
 

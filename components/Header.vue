@@ -66,8 +66,6 @@
 
         <v-btn
           text
-          v-bind="attrs"
-          v-on="on"
           active-class="ryp-ac"
           class="ryp-head-btn ryp-btn"
           :to="{name: 'resources'}"
@@ -75,8 +73,6 @@
 
         <v-btn
           text
-          v-bind="attrs"
-          v-on="on"
           active-class="ryp-ac"
           class="ryp-head-btn ryp-btn"
           :to="{name: 'news'}"
@@ -89,9 +85,9 @@
             members area
           </template>
         </RypBtn>
-        <RypBtn :to="{name: 'sign-up'}" color="accent">
+        <RypBtn :to="{name: 'member-directory'}" color="accent">
           <template v-slot:btnText>
-            sign up
+            member directory
           </template>
         </RypBtn>
       </div>
