@@ -70,7 +70,7 @@
           {
             id: 5,
             text: 'contact us',
-            name: 'contact'
+            name: 'contact-us'
           },
         ]
       }

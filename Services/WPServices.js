@@ -10,10 +10,43 @@ const apiClient = axios.create({
 })
 
 export default{
+
+  //Get all digital champions from WP
   getChampions(){
     return apiClient.get('/champion')
   },
+
+  //get a single champion from WP, passing the champion ID as a query param
   getChampion(id){
     return apiClient.get('champion' + id)
+  },
+
+  //get all testimonials from WP
+  getTestimonials(){
+    return apiClient.get('/testimonials');
+  },
+
+  //get all news articles
+  getPosts(){
+    return apiClient.get('/posts');
+  },
+
+  //api call to retreive images associated with individual posts
+  getImage(id){
+    if(id !== 0){
+      return apiClient.get('/media/' + id)
+    } else {
+      return apiClient.get('/media/' + 37)
+    }
+  },
+
+  //get all testimonials from WP
+  getPostCategories(){
+    return apiClient.get('/categories');
+  },
+
+  //get categories by individual ids
+  getCategory(id){
+     return apiClient.get('/categories/' + id)
   }
 }

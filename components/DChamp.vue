@@ -4,7 +4,7 @@
     :color=champ.acf.favourite_colour
   >
     <div :style="{background: $vuetify.theme.themes[theme].altBackground}"
-         class=""
+         class="champ-header"
          :class="{'d-flex flex-column': $vuetify.breakpoint.smAndDown, 'd-flex align-items': $vuetify.breakpoint.mdAndUp}"
     >
       <div class="d-flex flex-column justify-center">
@@ -212,6 +212,10 @@
   }
 
   .profile-desc{
-    min-height: 22rem;
+    min-height: 25rem;
+  }
+
+  .champ-header{
+    min-height: 10rem;
   }
 </style>

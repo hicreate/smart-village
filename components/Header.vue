@@ -23,6 +23,7 @@
         <v-btn
           exact
           text
+          nuxt
           active-class="ryp-ac"
           class="ryp-head-btn ryp-btn"
           :to="{name: 'index'}"
@@ -38,6 +39,7 @@
             <v-btn
               exact
               text
+              nuxt
               v-bind="attrs"
               v-on="on"
               active-class="ryp-ac"
@@ -51,21 +53,28 @@
             <v-list-item
               active-class="ryp-ac"
               exact
-              href="/about/digital-champions">
-              <v-list-item-title class="body-2">digital champions</v-list-item-title>
+              nuxt
+              :to="{name: 'about-digital-champions'}"
+            >
+              <v-list-item-title
+                exact
+                class="body-2 list-link">digital champions</v-list-item-title>
             </v-list-item>
             <v-list-item
               active-class="ryp-ac"
               exact
-              href="/about/how-we-work"
+              nuxt
+              :to="{name: 'about-how-we-work'}"
             >
-              <v-list-item-title class="body-2">how we work</v-list-item-title>
+              <v-list-item-title
+                class="body-2 list-link">how we work</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
 
         <v-btn
           text
+          nuxt
           active-class="ryp-ac"
           class="ryp-head-btn ryp-btn"
           :to="{name: 'resources'}"
@@ -73,6 +82,7 @@
 
         <v-btn
           text
+          nuxt
           active-class="ryp-ac"
           class="ryp-head-btn ryp-btn"
           :to="{name: 'news'}"

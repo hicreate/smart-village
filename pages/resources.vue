@@ -20,7 +20,7 @@
                 class="ryp-col-left"
                 :class="{'mt-10': $vuetify.breakpoint.smAndDown}"
               >
-                <v-img max-width="240px" src="/images/cogs.png"></v-img>
+                <v-img :contain="true" height="240" width="240" src="/images/cogs.png"></v-img>
                 <h2
                   class="h1 mb-2"
                   :style="{color: $vuetify.theme.themes[theme].fontColor}"

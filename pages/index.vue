@@ -6,10 +6,10 @@
         <h1
           class="h1 mb-2"
           :style="{color: $vuetify.theme.themes[theme].fontColor}">
-        A community designed to enhance business growth</h1>
+          An online space designed by and for young people</h1>
       </template>
       <template v-slot:heroSub>
-        <p>Sign up, create an account and start to realise your businesses full potential alongside likeminded young business owners across Scotland</p>
+        <p>Run or looking to setup your own business? Sign up, create an account today and discover your full business potential alongside likeminded young entrepreneurs across rural Scotland</p>
          </template>
       <template v-slot:heroBtnText>
         <span>get started</span>
@@ -22,10 +22,10 @@
         <h2
           class="h1 mb-2"
           :style="{color: $vuetify.theme.themes[theme].fontColor}"
-        >Working together in the same space to share experiences, resources & collective benefits</h2>
+        >An online space for young people in rural Scotland to connect, collaborate and learn</h2>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="font-weight-light">Find out more about the Rural Youth Project Smart Village, how it came about and how it can help you.</p>
       </template>
       <template v-slot:sectionCta>
         <RypBtn :to="{name: 'about'}" color="success" >
@@ -43,10 +43,12 @@
           <h2
             class="h1 mb-2"
             :style="{color: $vuetify.theme.themes[theme].fontColor}"
-          >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h2>
+          >Need some help and inspiration?</h2>
         </template>
         <template v-slot:sectionSub>
-          <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="font-weight-light">
+            Check out our rural specific resources, news and updates that will help you to gain knowledge and inspiration for your work, whether you are at an idea phase of setting up a business, developing an idea into a reality or you just want to hear what other young people in rural Scotland are up to and learn from them.
+          </p>
         </template>
         <template v-slot:sectionCta>
           <DoubleButton />
@@ -63,7 +65,7 @@
         >Sign up for a free account to access members only resources</h2>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="font-weight-light">Join the RYP smart village for even more useful resources that will help you to develop your skills and find services and information that are specific to you in your rural location.</p>
       </template>
       <template v-slot:sectionCta>
         <RypBtn :to="{name: 'sign-up'}" color="success" >

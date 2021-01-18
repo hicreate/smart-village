@@ -20,9 +20,9 @@
             >
               <h2 class="mb-5 text-center">What our users think...</h2>
               <div class="text-center">
-                <h3 class="mb-3">{{person.quote}}</h3>
-                <p class="mb-0">{{person.name}}</p>
-                <p class="overline">{{person.region}}</p>
+                <h3 class="mb-3">{{person.acf.testimonial_body}}</h3>
+                <p class="mb-0">{{person.title.rendered}}</p>
+                <p class="overline">{{person.acf.location}}</p>
 
               </div>
             </v-col>
@@ -34,34 +34,19 @@
 </template>
 
 <script>
+
   export default {
     name: 'Testimonial',
+    props:{
+      testimonials: Array
+    },
     data(){
       return{
-        testimonials:[
-          {
-            name: 'John Smith',
-            region: 'Highlands',
-            quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "'
-          },
-          {
-            name: 'John Smith',
-            region: 'Highlands',
-            quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "'
-          },
-          {
-            name: 'John Smith',
-            region: 'Highlands',
-            quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "'
-          },
-          {
-            name: 'John Smith',
-            region: 'Highlands',
-            quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "'
-          },
-        ]
       }
-    }
+    },
+    computed:{
+
+    },
   }
 </script>
 

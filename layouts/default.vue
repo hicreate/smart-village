@@ -53,6 +53,14 @@ export default {
     opacity: 0 !important;
   }
 
+  .ryp-ac .list-link{
+    color: #582DD2 !important;
+  }
+
+  .ryp-ac .mobile-nav-selected{
+    color: #582DD2 !important;
+  }
+
   .ryp-head-byn:active{
     opacity: 0 !important;
   }
@@ -91,6 +99,10 @@ export default {
 
   #test-slider .v-carousel__controls{
     background-color: rgba(0, 0, 0, 0) !important;
+  }
+
+  .v-card__text, .v-card__title {
+    word-break: normal; /* maybe !important  */
   }
 
 </style>

@@ -62,67 +62,28 @@
           v-for="(tile, i) in tiles"
           :key="i"
         >
-<!--          check if a menu item has children, if not then show a standard list item, if has children show a list-item-group with children as a sub group-->
           <v-list-item
-            v-if="!tile.hasChildren"
             :key="tile.title"
             @click="sheet = false"
             :nuxt="true"
+            :to="{name: tile.to}"
+            active-class="ryp-ac"
+            exact
           >
             <v-list-item-avatar
             >
               <v-avatar
                 size="32px"
                 tile
+                class="mobile-nav-selected"
               >
                 <v-icon>{{tile.icon}}</v-icon>
               </v-avatar>
             </v-list-item-avatar>
-            <v-list-item-title>{{ tile.title }}</v-list-item-title>
+            <v-list-item-title
+              class="mobile-nav-selected"
+            >{{ tile.title }}</v-list-item-title>
           </v-list-item>
-
-<!--          the group to show if children are present-->
-          <v-list-group
-            v-else
-            :value="false"
-            no-action
-          >
-            <template v-slot:activator>
-              <v-list-item-avatar
-              >
-                <v-avatar
-                  size="32px"
-                  tile
-                >
-                  <v-icon>{{tile.icon}}</v-icon>
-                </v-avatar>
-              </v-list-item-avatar>
-              <v-list-item-content>
-                <v-list-item-title>{{tile.title}}</v-list-item-title>
-              </v-list-item-content>
-            </template>
-
-            <v-list-item
-              v-for="(child, i) in tile.children"
-              :key="i"
-              @click="sheet = false"
-              :to="{name: 'about-digital-champions' }"
-              :nuxt="true"
-            >
-              <v-list-item-avatar
-              tile
-              >
-                <v-avatar
-                >
-                  <v-list-item-icon class="mx-auto">
-                    <v-icon v-text="child.icon"></v-icon>
-                  </v-list-item-icon>
-                </v-avatar>
-              </v-list-item-avatar>
-
-              <v-list-item-title v-text="child.title"></v-list-item-title>
-            </v-list-item>
-          </v-list-group>
         </div>
       </v-list>
     </v-bottom-sheet>
@@ -146,19 +107,16 @@
                 icon: 'mdi-star',
                 title: 'about',
                 to: 'about',
-                hasChildren: true,
-                children: [
-                  {
-                    icon: 'mdi-medal',
-                    title: 'digital champions',
-                    to: 'about-digital-champions'
-                  },
-                  {
-                    icon: 'mdi-comment-question-outline',
-                    title: 'how we work',
-                    to: 'how-we-work'
-                  },
-                ]
+              },
+              {
+                icon: 'mdi-medal',
+                title: 'digital champions',
+                to: 'about-digital-champions'
+              },
+              {
+                icon: 'mdi-comment-question-outline',
+                title: 'how we work',
+                to: 'about-how-we-work'
               },
             ],
           }

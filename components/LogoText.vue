@@ -1,10 +1,10 @@
 <template>
   <div>
+    <h2 :class="headingColor"
+        class="font-weight-black">Rural Youth Project</h2>
     <h3
       :class="subColor"
-      class="font-weight-light mt-n2">Rural Youth Project</h3>
-    <h2 :class="headingColor"
-        class="font-weight-black">Smart Village Scotland</h2>
+      class="font-weight-light mt-n2">Smart Village Scotland</h3>
 
   </div>
 </template>

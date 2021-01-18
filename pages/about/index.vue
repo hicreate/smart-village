@@ -81,7 +81,7 @@
         lg="10"
         class="mx-auto"
         >
-          <Testimonial />
+          <Testimonial :testimonials="testimonials" />
         </v-col>
       </v-row>
     </div>
@@ -113,6 +113,7 @@
   import RypBtn from "~/components/RypBtn"
   import SectionImageLeft from '~/components/SectionImageLeft'
   import Testimonial from '../../components/Testimonial'
+  import {mapState} from 'vuex'
 
   export default {
     name: 'about',
@@ -124,8 +125,22 @@
     computed:{
       theme () {
         return (this.$vuetify.theme.dark) ? 'dark' : 'light'
+      },
+      ...mapState({
+        testimonials: state => state.testimonials.testimonials
+      })
+    },
+    async fetch ({store, error}) {
+      try{
+        console.log('fetch hook working');
+        await store.dispatch('testimonials/fetchTestimonials')
+      } catch(e){
+        error({
+          statusCode: 503,
+          message: 'Unable to fetch Testimonial data at this time'
+        })
       }
-    }
+    },
   }
 </script>
 
