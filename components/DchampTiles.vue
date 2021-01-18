@@ -4,6 +4,7 @@
           <v-col
           v-for="(champ, i) in champs"
           :key="i"
+          xl="6"
           lg="6"
           cols="12"
           >

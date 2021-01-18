@@ -1,7 +1,7 @@
 <template>
   <v-card
     class="mx-auto card-border"
-    :color=champ.acf.favourite_colour
+    color="#27C6DA"
   >
     <div :style="{background: $vuetify.theme.themes[theme].altBackground}"
          class="champ-header"
@@ -41,8 +41,14 @@
       </div>
     </div>
 
-      <v-card-text class="profile-desc" v-html="champ.acf.champion_bio">
+    <div class="d-flex align-center profile-desc">
+      <v-card-text
+
+        v-html="champ.acf.champion_bio"
+      >
       </v-card-text>
+    </div>
+
 
     <v-card-actions>
       <v-list-item class="grow">
@@ -216,6 +222,6 @@
   }
 
   .champ-header{
-    min-height: 10rem;
+    min-height: 13rem;
   }
 </style>
