@@ -97,7 +97,7 @@ h2{
     }
 
     .mobile-image{
-      max-width: 80vw !important;
+      max-width: 100vw !important;
     }
   }
 </style>
