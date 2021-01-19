@@ -17,10 +17,13 @@
           >
             <v-col
             lg="8"
+            :class="{'px-15': $vuetify.breakpoint.smAndDown}"
             >
               <h2 class="mb-5 text-center">What our users think...</h2>
               <div class="text-center">
-                <h3 class="mb-3">{{person.acf.testimonial_body}}</h3>
+                <h3
+                  :class="{'body-2': $vuetify.breakpoint.smAndDown}"
+                  class="mb-3">{{person.acf.testimonial_body}}</h3>
                 <p class="mb-0">{{person.title.rendered}}</p>
                 <p class="overline">{{person.acf.location}}</p>
 

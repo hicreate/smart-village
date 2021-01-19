@@ -57,7 +57,9 @@
     </div>
 
 <!--    bottom section-->
-    <SectionImageLeft image-loc="center" image-source="images/ryp8-iso.png">
+    <SectionImageLeft
+      image-loc="center"
+      image-source="images/ryp8-iso.png">
       <template v-slot:sectionTitle>
         <h2
           class="h1 mb-2"

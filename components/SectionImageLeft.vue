@@ -19,8 +19,7 @@
               >
                 <slot name="addImage"></slot>
                   <v-img
-                    max-width=""
-                    class="ryp-left-img"
+                    class="ryp-left-img mobile-image"
                     :src="imageSource"></v-img>
               </v-col>
             </v-row>
@@ -95,6 +94,10 @@ h2{
   @media(max-width:763px){
     .ryp-left-image .v-responsive__content{
 
+    }
+
+    .mobile-image{
+      max-width: 80vw !important;
     }
   }
 </style>

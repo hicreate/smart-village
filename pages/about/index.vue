@@ -13,6 +13,7 @@
               <v-row>
                 <v-col
                   lg="5"
+                  cols="12"
                   style="position: relative;"
                 >
                   <v-img class="mb-5" max-width="200px" src="/images/champ.png"></v-img>
@@ -23,27 +24,36 @@
                   <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
                   <div>
-                    <v-row class="pa-5 mt-4">
+                    <v-row class="mt-4">
                       <v-col
                         class="secondary logo-box"
                       >
-                        <div class="d-flex flex-row secondary pa-5 align-center">
+                        <div
+                          :class="{'d-flex flex-row align-center': $vuetify.breakpoint.mdAndUp, 'd-flex flex-column': $vuetify.breakpoint.smAndDown}"
+                          class="pa-5 secondary"
+                        >
                           <h3 class="white--text mr-8">Delivered by</h3>
-                          <v-img max-width="96px" src="/images/ryplogo.png" ></v-img>
-                          <v-img max-width="96px" src="/images/svs.webp" ></v-img>
+                          <div class="d-flex">
+                            <v-img
+                              :class="{'my-2': $vuetify.breakpoint.smAndDown}"
+                              max-width="96px" src="/images/ryplogo.png" ></v-img>
+                            <v-img
+                              :class="{'my-2': $vuetify.breakpoint.smAndDown}"
+                              max-width="96px" src="/images/svs.webp" ></v-img>
+                          </div>
+
                         </div>
                       </v-col>
                     </v-row>
                   </div>
-
-
-
                 </v-col>
                 <v-col
                   lg="7"
-                  class="d-flex align-center justify-center"
+                  class="d-flex align-center justify-center mobile-hide"
                 >
-                  <v-img class="mb-5" src="/images/grid.png"></v-img>
+                  <v-img
+                    :class="{'mobile-image': $vuetify.breakpoint.smAndDown}"
+                    responsive class="mb-5 mobile-hide " src="/images/grid.png"></v-img>
                 </v-col>
               </v-row>
             </v-col>
@@ -54,7 +64,10 @@
     <div
     >
       <!--    component with image left and content right-->
-      <SectionImageLeft image-loc="bottom" image-source="/images/rural.png">
+      <SectionImageLeft
+        :class="{'pb-10 mt-n15': $vuetify.breakpoint.smAndDown}"
+        image-loc="bottom"
+        image-source="/images/rural.png">
         <template v-slot:sectionTitle>
           <h2
             class="h1 mb-2"
@@ -149,11 +162,13 @@
     padding-top: 4%;
   }
 
-  .ryp-over-image{
-    position: absolute;
-    z-index: 1;
-    right: -80px;
-    bottom: 30%;
+  @media(min-width: 764px){
+    .ryp-over-image{
+      position: absolute;
+      z-index: 1;
+      right: -80px;
+      bottom: 30%;
+    }
   }
 
   .paper-plane{
@@ -161,14 +176,28 @@
     right: -300px;
   }
 
-  @media(min-width: 764px){
-    .logo-box{
+  @media(max-width: 764px){
+       .mobile-hide{
+      display: none !important;
+    }
+
+    .ryp-over-image{
+      position: absolute;
+      z-index: 1;
+      right: -20px;
+      top: -50px;
+    }
+
+    .mobile-image{
+      max-width: 80vw !important;
     }
   }
 
   .logo-box{
     border-radius: 15px;
   }
+
+
 
 
 
