@@ -24,7 +24,10 @@
             v-for="(item, i) in menuLinks"
             :key="i"
             link
-            :href="item.name"
+            :to="{name: item.name}"
+            active-class="ryp-ac"
+            exact
+            nuxt
           >
             <v-list-item-icon>
               <v-icon
@@ -32,7 +35,10 @@
               >mdi-arrow-right-thin-circle-outline</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title v-text="item.text"></v-list-item-title>
+              <v-list-item-title
+                class="mobile-nav-selected"
+                v-text="item.text"
+              ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>

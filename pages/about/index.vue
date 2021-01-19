@@ -65,7 +65,7 @@
           </h3>
         </template>
         <template v-slot:sectionCta>
-          <h4 class="font-weight-bold">see more about how we work <a href="/how-we-work">here</a></h4>
+          <h4 class="font-weight-bold">see more about how we work <nuxt-link :to="{name: 'about-how-we-work'}">here</nuxt-link></h4>
         </template>
         <template v-slot:addImage>
           <v-img class="ryp-over-image" src="/images/saltire.png"></v-img>

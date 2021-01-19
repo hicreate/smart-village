@@ -1,7 +1,7 @@
 <template>
   <div>
 <!--    Main hero component here-->
-    <HeroMain hero-source="/images/header-hero-05-min.png">
+    <HeroMain hero-source="/images/hero-header-06.png">
       <template v-slot:heroTitle>
         <h1
           class="h1 mb-2"
