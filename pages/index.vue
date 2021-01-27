@@ -1,7 +1,7 @@
 <template>
   <div>
 <!--    Main hero component here-->
-    <HeroMain hero-source="/images/hero-header-06.png">
+    <HeroMain hero-source="https://content.rypsv.scot/wp-content/uploads/2021/01/SmartVillage_SiteVisuals_Updated-06-min.png">
       <template v-slot:heroTitle>
         <h1
           class="h1 mb-2"

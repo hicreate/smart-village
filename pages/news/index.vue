@@ -37,7 +37,7 @@
           message: 'Unable to fetch Testimonial data at this time'
         })
       }
-    },
+    }
   }
 </script>
 

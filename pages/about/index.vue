@@ -145,7 +145,6 @@
     },
     async fetch ({store, error}) {
       try{
-        console.log('fetch hook working');
         await store.dispatch('testimonials/fetchTestimonials')
       } catch(e){
         error({
