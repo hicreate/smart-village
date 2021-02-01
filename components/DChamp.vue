@@ -1,7 +1,8 @@
 <template>
   <v-card
-    class="mx-auto card-border"
-    color="#27C6DA"
+    class="mx-auto card-border champ-card"
+    :color="$vuetify.theme.themes[theme].background"
+    style="height: 100%; position: relative;"
   >
     <div :style="{background: $vuetify.theme.themes[theme].altBackground}"
          class="champ-header"
@@ -15,7 +16,7 @@
           >
             mdi-crown-outline
           </v-icon>
-          <span class="title font-weight-light">Digital Champion</span>
+          <span class="title font-weight-light">Digital<br>Champion</span>
         </v-card-title>
         <v-card-subtitle v-html="champ.acf.area_representing" class="overline">
         </v-card-subtitle>
@@ -43,23 +44,25 @@
 
     <div class="d-flex align-center profile-desc">
       <v-card-text
-
         v-html="champ.acf.champion_bio"
       >
       </v-card-text>
     </div>
 
-
-    <v-card-actions>
-      <v-list-item class="grow">
+    <v-card-actions
+      class="bottom-actions"
+      style="width: 100%;"
+    >
+      <v-list-item
+        class="grow">
         <v-row
-          :class="{'justify-end align-center': $vuetify.breakpoint.mdAndUp}"
+          :class="{'align-center': $vuetify.breakpoint.mdAndUp}"
         >
           <div
             :class="{'d-flex align-center': $vuetify.breakpoint.mdAndUp}"
           >
             <v-btn
-              color="secondary"
+              color="accent"
               class="text-lowercase"
               @click="reveal = true"
             >
@@ -140,7 +143,6 @@
                 </v-icon>
               </v-btn>
             </div>
-
           </div>
         </v-row>
       </v-list-item>
@@ -217,11 +219,19 @@
     border: 2px solid #fff !important;
   }
 
+  .champ-card{
+    padding-bottom: 55px;
+  }
+
   .profile-desc{
-    min-height: 25rem;
   }
 
   .champ-header{
     min-height: 13rem;
+  }
+
+  .bottom-actions{
+    position: absolute;
+    bottom: 0;
   }
 </style>

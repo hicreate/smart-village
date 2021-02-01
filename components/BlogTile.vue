@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div v-if="!post">
       <v-skeleton-loader
+        v-if="!news"
         class="mx-auto"
         max-width="300"
         type="card"
-      ></v-skeleton-loader>
-    </div>
+      >
+      </v-skeleton-loader>
     <v-card
       v-else
       class="mx-auto"
@@ -31,6 +31,7 @@
       </v-img>
 
       <v-card-title
+        class="blog-tile-title"
       >
         <div v-html="post.title.rendered" class="post-title">
 
@@ -96,7 +97,8 @@
         return (this.$vuetify.theme.dark) ? 'dark' : 'light'
       },
       ...mapState({
-        categories: state => state.posts.categories
+        categories: state => state.posts.categories,
+        news: state => state.posts.posts
       }),
       featuredImage(){
         if(this.post.featured_image_src){
@@ -120,14 +122,17 @@
 </script>
 
 <style scoped>
-  .post-title{
-    min-height: 72px !important;
-  }
 
   .category-chip{
     position: absolute;
     bottom: 5px;
     right: 5px;
+  }
+
+  @media(min-width: 764px){
+    .post-title{
+      min-height: 96px !important;
+    }
   }
 
 </style>

@@ -8,15 +8,18 @@
         :style="{background: $vuetify.theme.themes[theme].sectionBG}"
       >
         <v-row>
-
           <!--The content section, load in buttons as required using the last slot-->
           <v-col
             lg="6"
+            md="6"
+            cols="12"
             class="d-flex align-center"
           >
             <v-row >
               <v-col
                 lg="7"
+                md="7"
+                cols="12"
                 class="mx-auto"
               >
                 <div>
@@ -31,11 +34,15 @@
           <!--          The image column with central image widget-->
           <v-col
             lg="5"
+            md="5"
+            cols="12"
 
           >
             <v-row>
               <v-col
                 lg="10"
+                md="10"
+                cols="12"
                 class="mx-auto"
               >
                 <nuxt-img
@@ -73,7 +80,4 @@
     padding-top: 10%;
     padding-bottom: 10%;
   }
-
-
-
 </style>

@@ -6,6 +6,7 @@
       <!--          The image column that should sit flush on one edge on larger screen-->
       <v-col
         lg="12"
+        cols="12"
         class="pb-0 mx-auto"
       >
         <v-row
@@ -13,6 +14,7 @@
         >
           <v-col
             lg="6"
+            md="6"
             cols="12"
             :class="imageEdge"
           >
@@ -21,6 +23,7 @@
             >
               <v-col
                 lg="10"
+                md="10"
                 cols="12"
                 :class="imageEdge"
               >
@@ -35,13 +38,16 @@
           <!--The content section, load in buttons as required using the last slot-->
           <v-col
             lg="6"
+            md="6"
+            cols="12"
             class="d-flex align-center"
           >
             <v-row>
               <v-col
                 lg="7"
+                md="7"
                 cols="12"
-                class="mr-5 ml-5"
+                :class="{'': $vuetify.breakpoint.smAndDown, 'mr-5 ml-5': $vuetify.breakpoint.mdAndUp}"
               >
                 <div v-intersect="onIntersect">
                   <slot name="sectionTitle"></slot>
@@ -104,8 +110,12 @@ h2{
      .mobile-image{
       max-width: 100vw !important;
     }
+
+    .desktop-row{
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+
   }
 
-  .desktop-row{
-  }
 </style>

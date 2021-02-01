@@ -9,12 +9,17 @@
           <v-row class="d-flex">
             <v-col
               lg="5"
+              cols="12"
               class="d-flex align-center hero-head-left"
             >
               <v-row
                 :class="{'': $vuetify.breakpoint.mdAndUp, 'pr-5': $vuetify.breakpoint.smAndDown}"
               >
-                <v-col class="mx-auto" lg="9">
+                <v-col
+                  class="mx-auto"
+                  lg="9"
+                  cols="12"
+                >
                   <div>
                     <slot name="heroTitle"></slot>
                     <slot name="heroSub"></slot>
@@ -30,7 +35,10 @@
                 </v-col>
               </v-row>
             </v-col>
-            <v-col lg="7" class="pr-0 hero-head-right">
+            <v-col
+              lg="7"
+              cols="12"
+              class="pr-0 hero-head-right">
               <nuxt-img :src="heroSource"></nuxt-img>
             </v-col>
           </v-row>
