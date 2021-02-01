@@ -27,11 +27,15 @@ export default{
   },
 
   //get all news articles
-  getPosts(){
-    return apiClient.get('/posts');
+  getPosts(categories){
+    if(categories){
+      return apiClient.get('/posts?_embed&categories=' + categories);
+    } else{
+      return apiClient.get('/posts?_embed');
+    }
   },
 
-  //api call to retreive images associated with individual posts
+  //api call to retrieve images associated with individual posts
   getImage(id){
     if(id !== 0){
       return apiClient.get('/media/' + id)

@@ -32,8 +32,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxt/image'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -41,11 +41,14 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/svg',
-    '@nuxt/image'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
+  },
+
+  image: {
+    // Options
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)

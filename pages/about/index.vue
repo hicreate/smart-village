@@ -16,7 +16,7 @@
                   cols="12"
                   style="position: relative;"
                 >
-                  <v-img class="mb-5" max-width="200px" src="/images/champ.png"></v-img>
+                  <nuxt-img class="mb-5 champ-cup" src="/images/champ.png"></nuxt-img>
                   <h2
                     class="h1 mb-2"
                     :style="{color: $vuetify.theme.themes[theme].fontColor}"
@@ -34,12 +34,14 @@
                         >
                           <h3 class="white--text mr-8">Delivered by</h3>
                           <div class="d-flex">
-                            <v-img
+                            <nuxt-img
+                              class="partner-logo"
                               :class="{'my-2': $vuetify.breakpoint.smAndDown}"
-                              max-width="96px" src="/images/ryplogo.png" ></v-img>
-                            <v-img
+                              src="/images/ryplogo.png" ></nuxt-img>
+                            <nuxt-img
+                              class="partner-logo"
                               :class="{'my-2': $vuetify.breakpoint.smAndDown}"
-                              max-width="96px" src="/images/svs.webp" ></v-img>
+                              src="/images/svs.webp" ></nuxt-img>
                           </div>
 
                         </div>
@@ -51,9 +53,9 @@
                   lg="7"
                   class="d-flex align-center justify-center mobile-hide"
                 >
-                  <v-img
+                  <nuxt-img
                     :class="{'mobile-image': $vuetify.breakpoint.smAndDown}"
-                    responsive class="mb-5 mobile-hide " src="/images/grid.png"></v-img>
+                    class="mb-5 mobile-hide image-grid" src="/images/grid.png"></nuxt-img>
                 </v-col>
               </v-row>
             </v-col>
@@ -65,9 +67,9 @@
     >
       <!--    component with image left and content right-->
       <SectionImageLeft
-        :class="{'pb-10 mt-n15': $vuetify.breakpoint.smAndDown}"
+        :class="{'pb-10 mt-n15': $vuetify.breakpoint.smAndDown, 'ma-0': $vuetify.breakpoint.mdAndUp}"
         image-loc="bottom"
-        image-source="/images/rural.png">
+        image-source="https://content.rypsv.scot/wp-content/uploads/2021/01/Rural.png">
         <template v-slot:sectionTitle>
           <h2
             class="h1 mb-2"
@@ -80,9 +82,6 @@
         <template v-slot:sectionCta>
           <h4 class="font-weight-bold">see more about how we work <nuxt-link :to="{name: 'about-how-we-work'}">here</nuxt-link></h4>
         </template>
-        <template v-slot:addImage>
-          <v-img class="ryp-over-image" src="/images/saltire.png"></v-img>
-        </template>
       </SectionImageLeft>
     </div>
 
@@ -92,7 +91,7 @@
       <v-row>
         <v-col
         lg="10"
-        class="mx-auto"
+        class="mx-auto pt-0"
         >
           <Testimonial :testimonials="testimonials" />
         </v-col>
@@ -146,6 +145,7 @@
     async fetch ({store, error}) {
       try{
         await store.dispatch('testimonials/fetchTestimonials')
+
       } catch(e){
         error({
           statusCode: 503,
@@ -161,30 +161,9 @@
     padding-top: 4%;
   }
 
-  @media(min-width: 764px){
-    .ryp-over-image{
-      position: absolute;
-      z-index: 1;
-      right: -80px;
-      bottom: 30%;
-    }
-  }
-
-  .paper-plane{
-    position: absolute;
-    right: -300px;
-  }
-
   @media(max-width: 764px){
        .mobile-hide{
       display: none !important;
-    }
-
-    .ryp-over-image{
-      position: absolute;
-      z-index: 1;
-      right: -20px;
-      top: -50px;
     }
 
     .mobile-image{
@@ -196,8 +175,17 @@
     border-radius: 15px;
   }
 
+.partner-logo{
+  width: 96px;
+}
 
+  .champ-cup{
+    width: 200px;
+  }
 
+  .image-grid{
+    width: 100%;
+  }
 
 
 </style>

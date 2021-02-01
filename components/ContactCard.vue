@@ -6,6 +6,7 @@
       max-width="380px"
       elevation="0"
         class="pb-10"
+        style="position: relative;"
       >
         <v-card-title
         class="pb-0"
@@ -37,7 +38,6 @@
         </v-card-actions>
         <v-img
           class="contact-box-img"
-          max-width="128px"
           src="/images/ryp3.png"></v-img>
       </v-card>
     </div>
@@ -75,8 +75,13 @@
 
 <style scoped>
 .contact-box-img{
-  position: absolute;
+  max-width: 128px;
+  position: absolute !important;
   bottom: -50px;
   right: -30px;
 }
+
+  .contact-box-img img{
+
+  }
 </style>

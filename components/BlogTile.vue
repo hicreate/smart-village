@@ -1,68 +1,75 @@
 <template>
-  <v-card
-    class="mx-auto"
-    max-width="344"
-    :color=$vuetify.theme.themes[theme].altBackground
-  >
-    <v-img
-      :src="post.fImage.source_url"
-      height="200px"
+  <div>
+    <div v-if="!post">
+      <v-skeleton-loader
+        class="mx-auto"
+        max-width="300"
+        type="card"
+      ></v-skeleton-loader>
+    </div>
+    <v-card
+      v-else
+      class="mx-auto"
+      max-width="344"
+      :color=$vuetify.theme.themes[theme].altBackground
     >
-      <div class="category-chip">
-        <v-chip
-          small
-          dark
-          :color=$vuetify.theme.themes[theme].accent
-          v-for="(cat, i) in postCategories"
-          :key="i"
-        >
-          {{cat.name}}
-        </v-chip>
-      </div>
-    </v-img>
-
-    <v-card-title
-    >
-      <div v-html="post.title.rendered" class="post-title">
-
-      </div>
-    </v-card-title>
-
-    <v-card-subtitle>
-<!--      category and meta to go here-->
-    </v-card-subtitle>
-
-    <v-card-actions>
-      <v-btn
-        :color=$vuetify.theme.themes[theme].success
-        text
+      <v-img
+        :src="this.featuredImage"
+        height="200px"
       >
-        Read Post
-      </v-btn>
+        <div class="category-chip">
+          <v-chip
+            small
+            dark
+            :color=$vuetify.theme.themes[theme].accent
+            v-for="(cat, i) in this.post._embedded['wp:term'][0]"
+            :key="i"
+          >
+            {{cat.name}}
+          </v-chip>
+        </div>
+      </v-img>
 
-      <v-spacer></v-spacer>
+      <v-card-title
+      >
+        <div v-html="post.title.rendered" class="post-title">
 
-      <div>
+        </div>
+      </v-card-title>
+
+      <v-card-subtitle>
+        <!--      category and meta to go here-->
+      </v-card-subtitle>
+
+      <v-card-actions>
         <v-btn
+          :color=$vuetify.theme.themes[theme].success
           text
-          @click="show = !show"
         >
-          <span style="font-size: 9px !important;" class="overline font-weight-light">OR, SEE SUMMARY</span>
-          <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+          Read Post
         </v-btn>
-      </div>
+        <v-spacer></v-spacer>
+        <div>
+          <v-btn
+            text
+            @click="show = !show"
+          >
+            <span style="font-size: 9px !important;" class="overline font-weight-light">OR, SEE SUMMARY</span>
+            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+          </v-btn>
+        </div>
 
-    </v-card-actions>
+      </v-card-actions>
 
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-
-        <v-card-text v-html="post.excerpt.rendered">
-        </v-card-text>
-      </div>
-    </v-expand-transition>
-  </v-card>
+      <v-expand-transition>
+        <div v-show="show">
+          <v-divider></v-divider>
+          <v-card-text v-html="post.excerpt.rendered">
+          </v-card-text>
+        </div>
+      </v-expand-transition>
+    </v-card>
+  </div>
 </template>
 
 <script>
@@ -81,16 +88,8 @@
     },
     methods:{
       currentPostCategories(){
-        if(this.post.categories.length > 0){
-          this.post.categories.forEach(c => {
-            console.log(this.post.id, c)
-            let cats = this.categories.filter(cat => {
-              return cat.id === c
-            })
-            this.postCategories.push(cats[0])
-          })
-        }
-      }
+        console.log(this.post._embedded['wp:term'][0])
+      },
     },
     computed:{
       theme () {
@@ -99,6 +98,13 @@
       ...mapState({
         categories: state => state.posts.categories
       }),
+      featuredImage(){
+        if(this.post.featured_image_src){
+          return this.post.featured_image_src
+        } else{
+          return 'https://content.rypsv.scot/wp-content/uploads/2021/01/Tinto-Hill-lanarkshire.jpg'
+        }
+      }
     },
     filters: {
       limitExcerpt: function (value) {
@@ -108,8 +114,8 @@
       }
     },
     mounted(){
-      this.currentPostCategories()
-    }
+      this.currentPostCategories();
+    },
   }
 </script>
 

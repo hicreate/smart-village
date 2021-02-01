@@ -1,11 +1,6 @@
 <template>
   <div>
-    <h2 :class="headingColor"
-        class="font-weight-black">Rural Youth Project</h2>
-    <h3
-      :class="subColor"
-      class="font-weight-light mt-n2">Smart Village Scotland</h3>
-
+    <nuxt-img class="main-logo" :src='logoImage'></nuxt-img>
   </div>
 </template>
 
@@ -21,7 +16,10 @@
       },
       theme () {
         return (this.$vuetify.theme.dark) ? 'dark' : 'light'
-      }
+      },
+      logoImage(){
+        return (this.$vuetify.theme.dark) ? '/images/logo-light.png' : '/images/logo-dark.png'
+      },
     }
   }
 </script>
@@ -35,6 +33,10 @@
     h2{
       font-size: 1em;
     }
+  }
+
+  .main-logo{
+    width: 220px;
   }
 
 </style>

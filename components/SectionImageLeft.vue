@@ -1,26 +1,33 @@
 <template>
   <div>
-    <v-row class="mt-lg-15">
+    <v-row
+    class="desktop-row ma-0"
+    >
       <!--          The image column that should sit flush on one edge on larger screen-->
       <v-col
         lg="12"
         class="pb-0 mx-auto"
       >
-        <v-row>
+        <v-row
+          class="ma-0"
+        >
           <v-col
             lg="6"
+            cols="12"
             :class="imageEdge"
           >
-            <v-row>
+            <v-row
+              class="ma-0"
+            >
               <v-col
                 lg="10"
+                cols="12"
                 :class="imageEdge"
-                style="position:relative;"
               >
-                <slot name="addImage"></slot>
-                  <v-img
-                    class="ryp-left-img mobile-image"
-                    :src="imageSource"></v-img>
+                <nuxt-img
+                  fit="contain"
+                  class="ryp-left-img mobile-image"
+                  :src="imageSource"></nuxt-img>
               </v-col>
             </v-row>
           </v-col>
@@ -33,7 +40,8 @@
             <v-row>
               <v-col
                 lg="7"
-                class="mr-10 ml-5"
+                cols="12"
+                class="mr-5 ml-5"
               >
                 <div v-intersect="onIntersect">
                   <slot name="sectionTitle"></slot>
@@ -50,7 +58,6 @@
 </template>
 
 <script>
-
   export default {
     name: 'SectionImageLeft',
     props:{
@@ -70,7 +77,6 @@
     computed:{
       imageEdge(){
         let x;
-
         if(this.imageLoc === "bottom"){
           x = "pb-0 mx-auto"
         } else if(this.imageLoc === "left"){
@@ -78,7 +84,6 @@
         } else {
           x = "d-flex justify-center align-center mx-auto"
         }
-
         return x;
       }
     }
@@ -91,13 +96,16 @@ h2{
   line-height: 1.2em;
 }
 
+.ryp-left-img{
+  width: 100%;
+}
+
   @media(max-width:763px){
-    .ryp-left-image .v-responsive__content{
-
-    }
-
-    .mobile-image{
+     .mobile-image{
       max-width: 100vw !important;
     }
+  }
+
+  .desktop-row{
   }
 </style>

@@ -38,8 +38,8 @@
                 lg="10"
                 class="mx-auto"
               >
-                <v-img
-                  :src="imageSource"></v-img>
+                <nuxt-img
+                  :src="imageSource"></nuxt-img>
               </v-col>
             </v-row>
           </v-col>

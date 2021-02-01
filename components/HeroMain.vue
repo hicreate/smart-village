@@ -31,7 +31,7 @@
               </v-row>
             </v-col>
             <v-col lg="7" class="pr-0 hero-head-right">
-              <v-img contain :src="heroSource"></v-img>
+              <nuxt-img :src="heroSource"></nuxt-img>
             </v-col>
           </v-row>
         </v-col>

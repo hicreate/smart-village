@@ -23,17 +23,11 @@ export const mutations = {
 export const actions = {
 
 //action for retrieving the data from WP and filling local variable with content
-  fetchPosts({ commit }){
-    return WPServices.getPosts()
+  fetchPosts({ commit }, categories){
+    return WPServices.getPosts(categories)
       .then( response =>{
         let posts = response.data;
-        posts.forEach(post => {
-          WPServices.getImage(post.featured_media)
-            .then(response =>{
-              post.fImage = response.data;
-            })
-        })
-        commit('SET_POSTS', posts)
+        commit('SET_POSTS', posts);
       })
   },
 

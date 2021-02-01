@@ -12,11 +12,13 @@
           <!--The content section, load in buttons as required using the last slot-->
           <v-col
             lg="6"
+            cols="12"
             class="d-flex align-center col-cont-left"
           >
             <v-row>
               <v-col
                 lg="7"
+                cols="12"
                 class="mx-auto"
               >
                 <div v-intersect="onIntersect">
@@ -39,11 +41,10 @@
             >
               <v-col
                 lg="10"
-                class=""
                 :class="imageEdge"
               >
-                <v-img
-                  :src="imageSource"></v-img>
+                <nuxt-img
+                  :src="imageSource"></nuxt-img>
               </v-col>
             </v-row>
           </v-col>
@@ -74,7 +75,6 @@
     computed:{
       imageEdge(){
         let x;
-
         if(this.imageLoc === "bottom"){
           x = "pb-0 mx-auto"
         } else if(this.imageLoc === "right"){
@@ -82,7 +82,6 @@
         } else {
           x = "d-flex justify-center align-center mx-auto"
         }
-
         return x;
       }
     }
@@ -101,11 +100,6 @@
       order:1;
       padding-left: 36px;
     }
-
-    .sir-col-left{
-
-    }
-
   }
 
 </style>

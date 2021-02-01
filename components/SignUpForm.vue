@@ -91,7 +91,7 @@
         </v-card-actions>
         <v-img
           class="contact-box-img"
-          max-width="128px"
+          max-width="112px"
           src="/images/speech-bubble.png"></v-img>
       </v-card>
     </div>
@@ -136,8 +136,8 @@
 
   .contact-box-img{
     position: absolute;
-    bottom: -65px;
-    right: -30px;
+    bottom: -70px;
+    right: -40px;
   }
 
 </style>
