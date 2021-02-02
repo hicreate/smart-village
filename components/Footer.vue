@@ -2,12 +2,16 @@
   <v-row class="pb-10 ryp-footer">
     <v-col
     lg="10"
+    md="10"
+    cols="12"
     class="mx-auto pt-10"
     >
       <v-row>
         <v-col
           lg="6"
-          :class="{'': $vuetify.breakpoint.smAndDown, 'px-5': $vuetify.breakpoint.smAndDown}"
+          md="6"
+          cols="12"
+          :class="{'': $vuetify.breakpoint.smAndDown, 'px-10': $vuetify.breakpoint.smAndDown}"
         >
           <LogoText />
           <ContactCard

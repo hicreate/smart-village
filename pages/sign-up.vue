@@ -10,6 +10,8 @@
             <v-row>
               <v-col
                 lg="10"
+                md="10"
+                cols="12"
                 class="mx-auto"
               >
                 <v-row
@@ -17,12 +19,13 @@
                 >
                   <v-col
                     cols="12"
+                    md="5"
                     lg="5"
                     class="ryp-col-left"
                     :class="{'mt-10': $vuetify.breakpoint.smAndDown, 'd-flex flex-column justify-center': $vuetify.breakpoint.mdAndUp}"
                   >
                     <div>
-                      <v-img contain class="mb-5" max-width="300px" src="/images/YoungPeople.png"></v-img>
+                      <nuxt-img class="mb-5" src="/images/YoungPeople.png"></nuxt-img>
                       <h2
                         class="h1 mb-2"
                         :style="{color: $vuetify.theme.themes[theme].fontColor}"
@@ -34,6 +37,7 @@
                   <v-col
                     cols="12"
                     lg="7"
+                    md="7"
                     class="ryp-col-right"
                   >
                     <SignUpForm />

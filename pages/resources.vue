@@ -10,6 +10,8 @@
         <v-row>
           <v-col
           lg="10"
+          md="10"
+          cols="12"
           class="mx-auto"
           >
             <v-row
@@ -17,10 +19,14 @@
             >
               <v-col
                 lg="5"
+                md="5"
+                cols="12"
                 class="ryp-col-left"
                 :class="{'mt-10': $vuetify.breakpoint.smAndDown}"
               >
-                <v-img :contain="true" height="240" width="240" src="/images/cogs.png"></v-img>
+                <nuxt-img
+                  class="cogs"
+                  src="/images/cogs.png"></nuxt-img>
                 <h2
                   class="h1 mb-2"
                   :style="{color: $vuetify.theme.themes[theme].fontColor}"
@@ -60,6 +66,8 @@
               </v-col>
               <v-col
                 lg="7"
+                md="7"
+                cols="12"
                 class="ryp-col-right"
               >
                 <SignUpForm />
@@ -184,5 +192,9 @@
     .ryp-col-right{
       order: 1;
     }
+  }
+
+  .cogs{
+    width: 240px;
   }
 </style>
