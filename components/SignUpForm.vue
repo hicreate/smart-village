@@ -137,7 +137,7 @@
   .contact-box-img{
     position: absolute;
     bottom: -70px;
-    right: -40px;
+    right: -41px;
   }
 
 </style>
