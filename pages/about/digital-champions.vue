@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="pb-10">
-        <SectionImageRight image-loc="right" image-source="/images/member.png">
+        <SectionImageRight image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-05.png">
           <template v-slot:sectionTitle>
             <h1
               class="h1 mb-2"

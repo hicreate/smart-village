@@ -17,7 +17,7 @@
     </HeroMain>
 
 <!--    component with image left and content right-->
-    <SectionImageLeft image-loc="bottom" image-source="/images/section-webready.png">
+    <SectionImageLeft image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-05.png">
       <template v-slot:sectionTitle>
         <h2
           class="h1 mb-2"
@@ -59,7 +59,7 @@
 <!--    bottom section-->
     <SectionImageLeft
       image-loc="center"
-      image-source="images/ryp8-iso.png">
+      image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/RYP_Revised_Visuals-08.png">
       <template v-slot:sectionTitle>
         <h2
           class="h1 mb-2"

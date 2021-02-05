@@ -42,7 +42,7 @@ export default {
 
 <style>
   .ryp-ac .v-btn__content{
-    color: #582DD2 !important;
+    color: #8D027E !important;
 
   }
   .ryp-ac:before{
@@ -54,11 +54,11 @@ export default {
   }
 
   .ryp-ac .list-link{
-    color: #582DD2 !important;
+    color: #8D027E !important;
   }
 
   .ryp-ac .mobile-nav-selected{
-    color: #582DD2 !important;
+    color: #8D027E !important;
   }
 
   .ryp-head-byn:active{

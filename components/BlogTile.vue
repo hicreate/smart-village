@@ -11,6 +11,7 @@
       v-else
       class="mx-auto"
       max-width="344"
+      tile
       :color=$vuetify.theme.themes[theme].altBackground
     >
       <v-img
@@ -21,7 +22,7 @@
           <v-chip
             small
             dark
-            :color=$vuetify.theme.themes[theme].accent
+            :color=$vuetify.theme.themes[theme].secondary
             v-for="(cat, i) in this.post._embedded['wp:term'][0]"
             :key="i"
           >
@@ -44,7 +45,7 @@
 
       <v-card-actions>
         <v-btn
-          :color=$vuetify.theme.themes[theme].success
+          :color=$vuetify.theme.themes[theme].accent
           text
         >
           Read Post

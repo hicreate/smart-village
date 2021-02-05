@@ -21,12 +21,9 @@
                 lg="5"
                 md="5"
                 cols="12"
-                class="ryp-col-left"
+                class="ryp-col-left d-flex flex-column justify-center"
                 :class="{'mt-10': $vuetify.breakpoint.smAndDown}"
               >
-                <nuxt-img
-                  class="cogs"
-                  src="/images/cogs.png"></nuxt-img>
                 <h2
                   class="h1 mb-2"
                   :style="{color: $vuetify.theme.themes[theme].fontColor}"
@@ -46,7 +43,7 @@
                 >
                   <RypBtn
                     :class="{'mb-5': $vuetify.breakpoint.smAndDown, 'mr-5': $vuetify.breakpoint.mdAndUp}"
-                    :to="{name: 'resources'}" color="info">
+                    :to="{name: 'resources'}" :color="$vuetify.theme.themes[theme].secondary">
                     <template v-slot:btnText>
                       <span>FREE resources</span>
                     </template>
@@ -54,7 +51,7 @@
                       mdi-file-document
                     </template>
                   </RypBtn>
-                  <RypBtn class="mr-md-5" :to="{name: 'members-area'}" color="accent">
+                  <RypBtn class="mr-md-5" :to="{name: 'members-area'}" :color="$vuetify.theme.themes[theme].primary">
                     <template v-slot:btnText>
                       <span>members area</span>
                     </template>
@@ -80,10 +77,9 @@
   </div>
 
   <div
-  class="pb-10"
   >
     <!--    component with image left and content right-->
-    <SectionImageLeft image-loc="left" image-source="/images/resources.png">
+    <SectionImageLeft image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-06.png">
       <template v-slot:sectionTitle>
         <h2
           class="h1 mb-2 overtop"
@@ -113,7 +109,7 @@
   </div>
 
   <div class="py-15">
-    <SectionImageRight image-loc="right" image-source="/images/header-hero-05-min.png">
+    <SectionImageRight image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-05.png">
       <template v-slot:sectionTitle>
         <h1
           class="h1 mb-2"

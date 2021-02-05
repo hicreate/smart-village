@@ -16,7 +16,6 @@
                   cols="12"
                   style="position: relative;"
                 >
-                  <nuxt-img class="mb-5 champ-cup" src="/images/champ.png"></nuxt-img>
                   <h2
                     class="h1 mb-2"
                     :style="{color: $vuetify.theme.themes[theme].fontColor}"
@@ -67,9 +66,9 @@
     >
       <!--    component with image left and content right-->
       <SectionImageLeft
-        :class="{'pb-10 mt-n15': $vuetify.breakpoint.smAndDown, 'ma-0': $vuetify.breakpoint.mdAndUp}"
+        :class="{'pb-10': $vuetify.breakpoint.smAndDown, '': $vuetify.breakpoint.mdAndUp}"
         image-loc="bottom"
-        image-source="https://content.rypsv.scot/wp-content/uploads/2021/01/Rural.png">
+        image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-04-1.png">
         <template v-slot:sectionTitle>
           <h2
             class="h1 mb-2"

@@ -1,35 +1,30 @@
 <template>
   <div>
     <v-row
-    class="desktop-row ma-0"
+    class="desktop-row-5"
     >
       <!--          The image column that should sit flush on one edge on larger screen-->
       <v-col
-        lg="12"
+        lg="10"
+        md="10"
         cols="12"
-        class="pb-0 mx-auto"
+        class="mx-auto"
       >
-        <v-row
-          class="ma-0"
-        >
+        <v-row>
           <v-col
             lg="6"
             md="6"
             cols="12"
-            :class="imageEdge"
           >
-            <v-row
-              class="ma-0"
-            >
+            <v-row>
               <v-col
                 lg="10"
                 md="10"
                 cols="12"
-                :class="imageEdge"
               >
                 <nuxt-img
                   fit="contain"
-                  class="ryp-left-img mobile-image"
+                  class="mobile-image"
                   :src="imageSource"></nuxt-img>
               </v-col>
             </v-row>
@@ -80,19 +75,7 @@
         this.imageVisible = true
       }
     },
-    computed:{
-      imageEdge(){
-        let x;
-        if(this.imageLoc === "bottom"){
-          x = "pb-0 mx-auto"
-        } else if(this.imageLoc === "left"){
-           x = "pl-0"
-        } else {
-          x = "d-flex justify-center align-center mx-auto"
-        }
-        return x;
-      }
-    }
+    computed:{}
   }
 </script>
 
@@ -102,20 +85,15 @@ h2{
   line-height: 1.2em;
 }
 
-.ryp-left-img{
-  width: 100%;
+.left-img{
+ max-width: 80%;
+  margin: 0 auto;
 }
 
   @media(max-width:763px){
      .mobile-image{
       max-width: 100vw !important;
     }
-
-    .desktop-row{
-      padding-top: 10%;
-      padding-bottom: 10%;
-    }
-
   }
 
 </style>

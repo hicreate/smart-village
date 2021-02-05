@@ -8,7 +8,7 @@
         v-for="icon in icons"
         :key="icon.id"
         :to=icon.link
-        :color=$vuetify.theme.themes[theme].fontColor
+        :color=$vuetify.theme.themes[theme].secondary
       >
         <v-icon class="ryp-social">{{icon.icon}}</v-icon>
       </v-btn>

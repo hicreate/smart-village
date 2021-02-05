@@ -10,3 +10,14 @@
 .v-card__text, .v-card__title {
   word-break: normal; /* maybe !important  */
 }
+
+/*Global Spacings*/
+.desktop-row-10{
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+.desktop-row-5{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}

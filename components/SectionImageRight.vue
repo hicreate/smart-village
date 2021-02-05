@@ -1,10 +1,13 @@
 <template>
   <div>
-    <v-row class="mt-lg-15">
-
+    <v-row
+    class="desktop-row-5"
+    >
       <v-col
-        lg="12"
-        class="pb-0"
+        lg="10"
+        md="10"
+        cols="12"
+        class="mx-auto"
       >
         <v-row
         class="d-flex sir-col-left"
@@ -17,9 +20,9 @@
           >
             <v-row>
               <v-col
-                lg="7"
+                lg="10"
+                md="10"
                 cols="12"
-                class="mx-auto"
               >
                 <div v-intersect="onIntersect">
                   <slot name="sectionTitle"></slot>
@@ -33,15 +36,13 @@
           <!--          The image column that should sit flush on one edge on larger screen-->
           <v-col
             lg="6"
-            class="pb-0 col-cont-right"
+            class="col-cont-right"
           >
             <v-row
-              :class="imageEdge"
               class="sir-col-right"
             >
               <v-col
-                lg="10"
-                :class="imageEdge"
+                cols="12"
               >
                 <nuxt-img
                   :src="imageSource"></nuxt-img>
@@ -73,17 +74,6 @@
       }
     },
     computed:{
-      imageEdge(){
-        let x;
-        if(this.imageLoc === "bottom"){
-          x = "pb-0 mx-auto"
-        } else if(this.imageLoc === "right"){
-          x = "pr-0 justify-end"
-        } else {
-          x = "d-flex justify-center align-center mx-auto"
-        }
-        return x;
-      }
     }
   }
 </script>

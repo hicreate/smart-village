@@ -8,7 +8,7 @@
         <v-sheet
           height="100%"
           tile
-          color="#1179F5"
+          :color=$vuetify.theme.themes[theme].primary
         >
           <v-row
             class="fill-height"
@@ -48,7 +48,9 @@
       }
     },
     computed:{
-
+      theme () {
+        return (this.$vuetify.theme.dark) ? 'dark' : 'light'
+      }
     },
   }
 </script>

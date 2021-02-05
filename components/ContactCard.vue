@@ -2,7 +2,7 @@
     <div>
       <v-card
         dark
-      color="success"
+      :color=$vuetify.theme.themes[theme].accent
       max-width="380px"
       elevation="0"
         class="pb-10"
@@ -68,6 +68,11 @@
             link: '#'
           }
         ]
+      }
+    },
+    computed:{
+      theme () {
+        return (this.$vuetify.theme.dark) ? 'dark' : 'light'
       }
     }
   }

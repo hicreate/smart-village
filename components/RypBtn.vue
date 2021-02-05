@@ -5,6 +5,7 @@
     elevation="0"
     :to="to"
     @click="btnClicked"
+    dark
     >
       <v-icon><slot name="btnIcon"></slot></v-icon>
       <slot name="btnText"></slot>
