@@ -1,7 +1,7 @@
 <template>
   <div>
 <!--    Main hero component here-->
-    <HeroMain hero-source="https://content.rypsv.scot/wp-content/uploads/2021/01/SmartVillage_SiteVisuals_Updated-06-min.png">
+    <HeroMain>
       <template v-slot:heroTitle>
         <h1
           class="h1 mb-2"
@@ -15,6 +15,8 @@
         <span>get started</span>
       </template>
     </HeroMain>
+
+    <Signposts />
 
 <!--    component with image left and content right-->
     <SectionImageLeft image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-05.png">
@@ -87,9 +89,11 @@
   import SectionImageRightIsolated from '../components/SectionImageRightIsolated'
   import RypBtn from '../components/RypBtn'
   import DoubleButton from "~/components/DoubleButton";
+  import Signposts from '../components/Signposts'
 
 export default {
   components: {
+    Signposts,
     HeroMain,
     SectionImageLeft,
     RypBtn,

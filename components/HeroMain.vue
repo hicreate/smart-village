@@ -5,7 +5,11 @@
         :class="{'mt-15': $vuetify.breakpoint.mdAndUp, 'mt-5 pl-5': $vuetify.breakpoint.smAndDown}"
       >
         <v-col
-          cols="12">
+          cols="12"
+        lg="10"
+        md="10"
+        class="mx-auto"
+        >
           <v-row class="d-flex">
             <v-col
               lg="5"
@@ -18,6 +22,7 @@
                 <v-col
                   class="mx-auto"
                   lg="9"
+                  md="9"
                   cols="12"
                 >
                   <div>
@@ -37,9 +42,10 @@
             </v-col>
             <v-col
               lg="7"
+              md="7"
               cols="12"
-              class="pr-0 hero-head-right">
-              <nuxt-img :src="heroSource"></nuxt-img>
+            >
+              <HomeSlider />
             </v-col>
           </v-row>
         </v-col>
@@ -50,6 +56,7 @@
 <script>
   import RypBtn from './RypBtn'
   import SocialIcons from "~/components/SocialIcons";
+  import HomeSlider from './HomeSlider'
 
   export default {
     name: 'HeroMain',
@@ -57,6 +64,7 @@
       heroSource: String
     },
     components:{
+      HomeSlider,
       RypBtn,
       SocialIcons
     }

@@ -70,7 +70,8 @@ export default {
           altBackground:'#F5F1E5',
           sectionBG: '#F2F0EC',
           brandPrimary: '#6DB41D',
-          fontColor: '#000000'
+          fontColor: '#000000',
+          cardBackground:'#eaf5e8',
         },
         dark: {
           primary: '#6DB41D',
@@ -80,11 +81,12 @@ export default {
           warning: '#FF9700',
           error: '#FF1900',
           success: '#6DB41D',
-          background: '#15202d',
-          altBackground:'#151E2B',
-          sectionBG: '#15202d',
+          background: '#1A0E40',
+          altBackground:'#291471',
+          sectionBG: '#291471',
           brandPrimary: '#6DB41D',
-          fontColor: '#FFFFFF'
+          fontColor: '#FFFFFF',
+          cardBackground:'#1f1151',
         }
       }
     }
@@ -92,5 +94,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    transpile: ['gsap'],
   }
 }
