@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -71,11 +69,8 @@ export default {
           sectionBG: '#F2F0EC',
           brandPrimary: '#6DB41D',
           fontColor: '#000000',
-<<<<<<< HEAD
           cardBackground:'#eaf5e8',
-=======
           cardBG: '#0A1119'
->>>>>>> 50ae6b00e0b342a6e13c889e7df42c1d30c6dc77
         },
         dark: {
           primary: '#6DB41D',
@@ -90,11 +85,8 @@ export default {
           sectionBG: '#291471',
           brandPrimary: '#6DB41D',
           fontColor: '#FFFFFF',
-<<<<<<< HEAD
           cardBackground:'#1f1151',
-=======
           cardBG: '#0A1119'
->>>>>>> 50ae6b00e0b342a6e13c889e7df42c1d30c6dc77
         }
       }
     }

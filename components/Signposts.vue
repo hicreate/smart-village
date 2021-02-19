@@ -89,14 +89,17 @@
     },
     methods:{
       entranceAnimation(){
-        var tl = gsap.timeline({
-          // yes, we can add it to an entire timeline!
-          scrollTrigger: {
-            trigger: this.$refs.signHolder,
-            start: "center center",
-          }
+
+        gsap.from(".signpost-tile", {
+          scrollTrigger: ".signpost-tile",
+          duration: 2,
+          scale: 0.8,
+          opacity: 0,
+          delay: 0.5,
+          stagger: 0.2,
+          ease: "elastic",
+          force3D: true
         });
-        tl.from(".signpost-tile", { y:30, scale: 0.5 });
       }
     },
     computed:{
