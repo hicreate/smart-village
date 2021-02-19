@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-img class="main-logo" :src='logoImage'></nuxt-img>
+    <v-img class="main-logo" :src='logoImage'></v-img>
   </div>
 </template>
 

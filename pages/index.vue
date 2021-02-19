@@ -1,7 +1,11 @@
 <template>
   <div>
 <!--    Main hero component here-->
+<<<<<<< HEAD
     <HeroMain>
+=======
+    <HeroMain hero-source="https://content.rypsv.scot/wp-content/uploads/2021/02/Rural-Youth-Ideas-Festival-004-scaled.jpg">
+>>>>>>> 50ae6b00e0b342a6e13c889e7df42c1d30c6dc77
       <template v-slot:heroTitle>
         <h1
           class="h1 mb-2"
@@ -19,7 +23,7 @@
     <Signposts />
 
 <!--    component with image left and content right-->
-    <SectionImageLeft image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-05.png">
+    <SectionImageLeft image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-03.png">
       <template v-slot:sectionTitle>
         <h2
           class="h1 mb-2"
@@ -38,9 +42,13 @@
       </template>
     </SectionImageLeft>
 
+<!--    Recent Posts-->
+<RecentPosts />
+
+
 <!--    section in a lighter frame-->
     <div :style="{background: $vuetify.theme.themes[theme].altBackground}">
-      <SectionImageRightIsolated image-source="/images/comp-user.png">
+      <SectionImageRightIsolated image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/Rural-Youth-Ideas-Festival-098-scaled.jpg">
         <template v-slot:sectionTitle>
           <h2
             class="h1 mb-2"
@@ -88,8 +96,13 @@
   import SectionImageLeft from '../components/SectionImageLeft'
   import SectionImageRightIsolated from '../components/SectionImageRightIsolated'
   import RypBtn from '../components/RypBtn'
+<<<<<<< HEAD
   import DoubleButton from "~/components/DoubleButton";
   import Signposts from '../components/Signposts'
+=======
+  import DoubleButton from "~/components/DoubleButton"
+  import RecentPosts from "~/components/RecentPosts";
+>>>>>>> 50ae6b00e0b342a6e13c889e7df42c1d30c6dc77
 
 export default {
   components: {
@@ -98,7 +111,8 @@ export default {
     SectionImageLeft,
     RypBtn,
     SectionImageRightIsolated,
-    DoubleButton
+    DoubleButton,
+    RecentPosts
   },
   data(){
     return{

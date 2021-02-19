@@ -1,5 +1,7 @@
 <template>
-  <v-row class="pa-4">
+  <v-row
+    :class="{'pa-4': $vuetify.breakpoint.mdAndUp}"
+  >
     <v-col class="d-flex flex-column justify-center align-items">
         <div v-if="this.selectedCategoryName">
           Showing {{news.length}} posts from category <strong>'{{this.selectedCategoryName[0].name}}'</strong>

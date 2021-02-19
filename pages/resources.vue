@@ -1,18 +1,16 @@
 <template>
 <div>
   <!--    section in a lighter frame-->
-  <div :style="{background: $vuetify.theme.themes[theme].altBackground}">
-    <v-row>
-      <v-col
-      class="rounded-lg extra-height my-5 mx-8"
-      :style="{background: $vuetify.theme.themes[theme].sectionBG}"
-      >
-        <v-row>
+  <div>
+        <v-row
+        class="desktop-row-5"
+        >
           <v-col
           lg="10"
           md="10"
           cols="12"
           class="mx-auto"
+          :class="{'px-8': $vuetify.breakpoint.smAndDown}"
           >
             <v-row
             class="d-flex"
@@ -70,8 +68,6 @@
                 <SignUpForm />
               </v-col>
             </v-row>
-          </v-col>
-        </v-row>
           </v-col>
         </v-row>
   </div>

@@ -20,11 +20,15 @@
         </v-col>
         <v-col
           lg="3"
+          md="12"
+          cols="12"
         >
           <UsefulLinks />
         </v-col>
         <v-col
           lg="3"
+          md="3"
+          cols="12"
         >
           <QuickLinks />
         </v-col>

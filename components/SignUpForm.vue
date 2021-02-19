@@ -1,10 +1,10 @@
 <template>
     <div>
       <v-card
+        dark
       elevation="0"
-      class="mx-auto rounded-xl pa-md-5 pa-sm-5"
-      :class="borderColor"
-      :color=$vuetify.theme.themes[theme].altBackground
+      class="mx-auto rounded pa-md-5 pa-sm-5"
+      :color=$vuetify.theme.themes[theme].secondary
       max-width="500px"
       >
         <v-card-title class="pb-1">
@@ -45,13 +45,13 @@
             >
             </v-text-field>
 
-            <!--            business name field-->
+            <!--            email confirm-->
             <v-text-field
               dense
               solo
               elevation="0"
               light
-              label="your business name"
+              label="confirm your email"
               full-width
             >
             </v-text-field>
@@ -92,7 +92,7 @@
         <v-img
           class="contact-box-img"
           max-width="112px"
-          src="/images/speech-bubble.png"></v-img>
+          src="/images/revised-comment.png"></v-img>
       </v-card>
     </div>
 </template>
@@ -127,7 +127,7 @@
   }
 
   .ryp-border-accent{
-    border: 2px solid #1179F5 !important;
+    border: 2px solid #FF7214 !important;
   }
 
   .full-width{

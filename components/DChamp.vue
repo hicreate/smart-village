@@ -4,12 +4,13 @@
     :color="$vuetify.theme.themes[theme].background"
     style="height: 100%; position: relative;"
   >
-    <div :style="{background: $vuetify.theme.themes[theme].altBackground}"
+    <div :style="{background: $vuetify.theme.themes[theme].primary}"
          class="champ-header"
          :class="{'d-flex flex-column': $vuetify.breakpoint.smAndDown, 'd-flex align-items': $vuetify.breakpoint.mdAndUp}"
     >
       <div class="d-flex flex-column justify-center">
-        <v-card-title>
+        <v-card-title
+        >
           <v-icon
             large
             left

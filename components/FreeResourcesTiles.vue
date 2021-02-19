@@ -1,13 +1,18 @@
 <template>
     <div>
-      <v-row>
+      <v-row
+      >
         <v-col
           class="rounded-lg extra-height my-5 mx-8"
           :style="{background: $vuetify.theme.themes[theme].sectionBG}"
         >
-          <v-row>
+          <v-row
+            class="desktop-row-5"
+          >
             <v-col
               lg="10"
+              md="10"
+              cols="12"
               class="mx-auto"
             >
               <v-row>
@@ -39,9 +44,6 @@
   export default {
     name: 'FreeResourcesTiles',
     components: { FreeResource },
-    coponents:{
-      FreeResource
-    },
     data(){
       return{
         resources:[1, 2, 3, 4]

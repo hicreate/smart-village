@@ -33,14 +33,16 @@
                         >
                           <h3 class="white--text mr-8">Delivered by</h3>
                           <div class="d-flex">
-                            <nuxt-img
+                            <v-img
+                              contain
                               class="partner-logo"
                               :class="{'my-2': $vuetify.breakpoint.smAndDown}"
-                              src="/images/ryplogo.png" ></nuxt-img>
-                            <nuxt-img
+                              src="/images/ryp-logo-light.png" ></v-img>
+                            <v-img
+                              contain
                               class="partner-logo"
                               :class="{'my-2': $vuetify.breakpoint.smAndDown}"
-                              src="/images/svs.webp" ></nuxt-img>
+                              src="/images/svs.webp" ></v-img>
                           </div>
 
                         </div>
@@ -52,9 +54,9 @@
                   lg="7"
                   class="d-flex align-center justify-center mobile-hide"
                 >
-                  <nuxt-img
+                  <v-img
                     :class="{'mobile-image': $vuetify.breakpoint.smAndDown}"
-                    class="mb-5 mobile-hide image-grid" src="/images/grid.png"></nuxt-img>
+                    class="mb-5 mobile-hide image-grid" src="/images/grid.png"></v-img>
                 </v-col>
               </v-row>
             </v-col>
@@ -98,7 +100,7 @@
     </div>
 
     <div class="py-15">
-      <SectionImageRight image-loc="right" image-source="/images/header-hero-05-min.png">
+      <SectionImageRight image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/revised-vectors-06.png">
         <template v-slot:sectionTitle>
           <h2
             class="mb-2"
@@ -175,7 +177,7 @@
   }
 
 .partner-logo{
-  width: 96px;
+  max-width: 124px;
 }
 
   .champ-cup{

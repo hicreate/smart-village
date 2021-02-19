@@ -2,7 +2,10 @@
   <v-row class="extra-height">
     <v-col
       lg="10"
+      md="10"
+      cols="12"
       class="mx-auto"
+      :class="{'px-8': $vuetify.breakpoint.smAndDown}"
     >
       <v-row>
         <v-col>

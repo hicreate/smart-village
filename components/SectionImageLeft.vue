@@ -9,6 +9,7 @@
         md="10"
         cols="12"
         class="mx-auto"
+        :class="{'px-8': $vuetify.breakpoint.smAndDown}"
       >
         <v-row>
           <v-col
@@ -22,10 +23,9 @@
                 md="10"
                 cols="12"
               >
-                <nuxt-img
-                  fit="contain"
+                <v-img
                   class="mobile-image"
-                  :src="imageSource"></nuxt-img>
+                  :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>
@@ -39,8 +39,6 @@
           >
             <v-row>
               <v-col
-                lg="7"
-                md="7"
                 cols="12"
                 :class="{'': $vuetify.breakpoint.smAndDown, 'mr-5 ml-5': $vuetify.breakpoint.mdAndUp}"
               >

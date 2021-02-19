@@ -8,6 +8,7 @@
         md="10"
         cols="12"
         class="mx-auto"
+        :class="{'px-8': $vuetify.breakpoint.smAndDown}"
       >
         <v-row
         class="d-flex sir-col-left"
@@ -44,8 +45,8 @@
               <v-col
                 cols="12"
               >
-                <nuxt-img
-                  :src="imageSource"></nuxt-img>
+                <v-img
+                  :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>
@@ -82,13 +83,10 @@
   @media(max-width:764px){
     .col-cont-left{
       order:2;
-      padding-left: 36px;
-      padding-right: 36px;
     }
 
     .col-cont-right{
       order:1;
-      padding-left: 36px;
     }
   }
 

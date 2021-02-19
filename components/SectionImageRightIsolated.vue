@@ -1,13 +1,18 @@
 <template>
   <div
-    class="py-5 px-8"
+    class="py-5"
     >
     <v-row>
       <v-col
-        class="mx-auto rounded-lg extra-height"
-        :style="{background: $vuetify.theme.themes[theme].sectionBG}"
+        cols="12"
+        lg="10"
+        md="10"
+        class="mx-auto rounded-lg rounded-md"
+        :class="{'px-8': $vuetify.breakpoint.smAndDown}"
       >
-        <v-row>
+        <v-row
+        class="desktop-row-5"
+        >
           <!--The content section, load in buttons as required using the last slot-->
           <v-col
             lg="6"
@@ -15,50 +20,32 @@
             cols="12"
             class="d-flex align-center"
           >
-            <v-row >
-              <v-col
-                lg="7"
-                md="7"
-                cols="12"
-                class="mx-auto"
-              >
+
                 <div>
                   <slot name="sectionTitle"></slot>
                   <slot name="sectionSub"></slot>
                   <slot name="sectionCta"></slot>
                 </div>
               </v-col>
-            </v-row>
-          </v-col>
 
           <!--          The image column with central image widget-->
           <v-col
-            lg="5"
-            md="5"
+            lg="6"
+            md="6"
             cols="12"
 
           >
-            <v-row>
-              <v-col
-                lg="10"
-                md="10"
-                cols="12"
-                class="mx-auto"
-              >
-                <nuxt-img
-                  :src="imageSource"></nuxt-img>
+                <v-img
+                  class="section-image"
+                  :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>
-
         </v-row>
-      </v-col>
-    </v-row>
   </div>
 </template>
 
 <script>
-
   export default {
     name: 'SectionImageRightIsolated',
     props:{
@@ -76,8 +63,8 @@
 </script>
 
 <style scoped>
-  .extra-height{
-    padding-top: 10%;
-    padding-bottom: 10%;
+
+  .section-image{
+    border-radius: 20px;
   }
 </style>

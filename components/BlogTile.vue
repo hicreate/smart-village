@@ -3,16 +3,17 @@
       <v-skeleton-loader
         v-if="!news"
         class="mx-auto"
-        max-width="300"
+        :max-width= maxCardWidth
         type="card"
       >
       </v-skeleton-loader>
     <v-card
       v-else
       class="mx-auto"
-      max-width="344"
-      tile
-      :color=$vuetify.theme.themes[theme].altBackground
+      :max-width= maxCardWidth
+      elevation="0"
+      :color=$vuetify.theme.themes[theme].cardBG
+      dark
     >
       <v-img
         :src="this.featuredImage"
@@ -45,8 +46,9 @@
 
       <v-card-actions>
         <v-btn
-          :color=$vuetify.theme.themes[theme].accent
+          color="white"
           text
+          small
         >
           Read Post
         </v-btn>
@@ -107,6 +109,14 @@
         } else{
           return 'https://content.rypsv.scot/wp-content/uploads/2021/01/Tinto-Hill-lanarkshire.jpg'
         }
+      },
+      maxCardWidth(){
+        let maxWidth = '0'
+        if(this.$vuetify.breakpoint.smAndDown){
+          maxWidth = '1200';
+        } else{
+          maxWidth = '300'
+        } return maxWidth;
       }
     },
     filters: {
