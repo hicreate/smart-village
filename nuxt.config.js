@@ -70,7 +70,7 @@ export default {
           brandPrimary: '#6DB41D',
           fontColor: '#000000',
           cardBackground:'#eaf5e8',
-          cardBG: '#0A1119'
+          cardBG: '#9e7a5a'
         },
         dark: {
           primary: '#6DB41D',
@@ -86,7 +86,7 @@ export default {
           brandPrimary: '#6DB41D',
           fontColor: '#FFFFFF',
           cardBackground:'#1f1151',
-          cardBG: '#0A1119'
+          cardBG: '#190d29'
         }
       }
     }
@@ -94,6 +94,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ['gsap'],
+    transpile: ["gsap"],
   }
 }

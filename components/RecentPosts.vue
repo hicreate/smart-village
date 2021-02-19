@@ -1,7 +1,7 @@
 <template>
   <v-row
     class="desktop-row-5"
-    :style="{background: $vuetify.theme.themes.dark.altBackground}"
+    :style="{background: $vuetify.theme.themes[theme].altBackground}"
   >
     <v-col
       cols="12"
@@ -16,10 +16,10 @@
         <div
           :class="{'pb-8': $vuetify.breakpoint.smAndDown}"
         >
-          <p class="mb-0 pb-0 white--text">See what's been happening</p>
+          <p class="mb-0 pb-0">See what's been happening</p>
           <h2
             class="h1 mb-2"
-            :style="{color: $vuetify.theme.themes.dark.fontColor}"
+            :style="{color: $vuetify.theme.themes[theme].fontColor}"
           >Recent Posts</h2>
         </div>
         <v-spacer></v-spacer>
@@ -40,7 +40,7 @@
       </div>
 
       <v-row
-        class="d-flex justify-content-start"
+        class="d-flex justify-start"
       >
         <v-col
           v-for="(post, i) in news.slice(0, 4)"

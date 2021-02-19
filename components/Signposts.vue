@@ -6,6 +6,7 @@
         md="10"
         lg="10"
         class="mx-auto"
+        :class="{'px-8': $vuetify.breakpoint.smAndDown}"
         >
           <div class="signpost-header">
             <h2 class="text-center">Lorem ipsum dolor sit amet</h2>
@@ -13,7 +14,10 @@
           </div>
           <v-row>
             <v-col
-            v-for="(tile, i) in tiles"
+              cols="12"
+              lg="3"
+              md="3"
+              v-for="(tile, i) in tiles"
             :key="i"
             >
               <v-card

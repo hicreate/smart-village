@@ -1,11 +1,13 @@
 <template>
-    <div class="slider-holder">
+    <div
+      class="slider-holder"
+      :class="{'drop-shadow': $vuetify.breakpoint.mdAndUp}"
+    >
       <v-carousel
         cycle
-        height="600"
+        :height="sliderHeight"
         hide-delimiter-background
         show-arrows-on-hover
-
       >
         <v-carousel-item
           v-for="(slide, i) in slides"
@@ -18,7 +20,7 @@
             v-bind:style="{ 'background-image': 'url(' + slide.url + ')' }"
           >
             <v-row
-              class="fill-height"
+              class="fill-height ma-0"
               align="center"
               justify="center"
             >
@@ -49,6 +51,17 @@
           },
         ]
       }
+    },
+    computed:{
+      sliderHeight(){
+        var height;
+        if(this.$vuetify.breakpoint.mdAndUp){
+          height = 600;
+        } else if(this.$vuetify.breakpoint.smAndDown) {
+          height = 350;
+        }
+        return height;
+      }
     }
   }
 </script>
@@ -57,6 +70,18 @@
 .slide-image{
   background-size: cover;
   background-position: center center;
+  border-radius: 30px;
 }
+
+  .slider-holder{
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .drop-shadow{
+    box-shadow: 26px 25px 0px 12px rgba(67,147,195,1);
+    -webkit-box-shadow: 26px 25px 0px 12px rgba(67,147,195,1);
+    -moz-box-shadow: 26px 25px 0px 12px rgba(67,147,195,1);
+  }
 
 </style>

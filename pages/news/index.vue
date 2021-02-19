@@ -17,7 +17,7 @@
         <v-col
         cols="12"
         >
-          <BlogGrid :news="news" />
+         <BlogGrid :news="news" />
         </v-col>
       </v-row>
     </v-col>

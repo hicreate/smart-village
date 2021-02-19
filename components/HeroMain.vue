@@ -44,6 +44,7 @@
               lg="7"
               md="7"
               cols="12"
+              :class="{'pa-8': $vuetify.breakpoint.smAndDown}"
             >
               <HomeSlider />
             </v-col>

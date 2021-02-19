@@ -9,7 +9,6 @@
       </v-skeleton-loader>
     <v-card
       v-else
-      class="mx-auto"
       :max-width= maxCardWidth
       elevation="0"
       :color=$vuetify.theme.themes[theme].cardBG
