@@ -15,7 +15,7 @@
       dark
     >
       <v-img
-        :src="this.featuredImage"
+        :src="this.post._embedded['wp:featuredmedia'][0].source_url"
         height="200px"
       >
         <div class="category-chip">
@@ -33,21 +33,24 @@
 
       <v-card-title
         class="blog-tile-title"
-      >
-        <div v-html="post.title.rendered" class="post-title">
+      ><a @click="navigatePost"><div v-html="post.title.rendered" class="post-title">
 
-        </div>
+      </div></a>
+
       </v-card-title>
 
       <v-card-subtitle>
         <!--      category and meta to go here-->
       </v-card-subtitle>
 
-      <v-card-actions>
+      <v-card-actions
+      class="tile-actions"
+      >
         <v-btn
           color="white"
           text
           small
+          @click="navigatePost"
         >
           Read Post
         </v-btn>
@@ -61,7 +64,6 @@
             <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
           </v-btn>
         </div>
-
       </v-card-actions>
 
       <v-expand-transition>
@@ -93,6 +95,9 @@
       currentPostCategories(){
         console.log(this.post._embedded['wp:term'][0])
       },
+      navigatePost(){
+        this.$router.push('/news/' + this.post.slug);
+      }
     },
     computed:{
       theme () {
@@ -143,6 +148,15 @@
     .post-title{
       min-height: 96px !important;
     }
+  }
+
+  .blog-tile-title{
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+
+  .tile-actions{
+    border-top: 0.5px solid #fff;
   }
 
 </style>

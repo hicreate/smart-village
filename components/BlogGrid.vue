@@ -29,7 +29,7 @@
       BlogTile
     },
     props:{
-      news: Array
+      //news: Array
     },
     methods:{
       animatePosts(){
