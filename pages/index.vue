@@ -6,10 +6,10 @@
         <h1
           class="h1 mb-2"
           :style="{color: $vuetify.theme.themes[theme].fontColor}">
-          An online space designed by and for young people</h1>
+          A space designed by and for Young People</h1>
       </template>
       <template v-slot:heroSub>
-        <p>Run or looking to setup your own business? Sign up, create an account today and discover your full business potential alongside likeminded young entrepreneurs across rural Scotland</p>
+        <p>Sign up, create an account and join our community to connect, collaborate and discover new opportunities and resources that will help you to live and work where you want in rural Scotland.</p>
          </template>
       <template v-slot:heroBtnText>
         <span>get started</span>
@@ -24,10 +24,10 @@
         <h2
           class="h1 mb-2"
           :style="{color: $vuetify.theme.themes[theme].fontColor}"
-        >An online space for young people in rural Scotland to connect, collaborate and learn</h2>
+        >Sign up for a free account to access resources and our directory</h2>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light">Find out more about the Rural Youth Project Smart Village, how it came about and how it can help you.</p>
+        <p class="font-weight-light">Join the RYP Smart Village for even more useful resources and access to the members directory that will help you develop your skills and find services and information that are specific to your location.</p>
       </template>
       <template v-slot:sectionCta>
         <RypBtn :to="{name: 'about'}" color="success" >

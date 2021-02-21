@@ -7,8 +7,13 @@ export const state = () => ({
   postLoader: true
 })
 
-export const mutations = {
+export const getters = {
+  getPostBySlug: (state) => (slug) => {
+    return state.posts.find(post => post.slug === slug)
+  }
+}
 
+export const mutations = {
   //update the data from WP ready for use in the app
   SET_POSTS(state, posts){
     state.posts = posts;
@@ -23,7 +28,6 @@ export const mutations = {
   SET_LOADER(state, x){
     state.postLoader = x;
   }
-
 }
 
 export const actions = {

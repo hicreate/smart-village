@@ -20,8 +20,9 @@
                     class="h1 mb-2"
                     :style="{color: $vuetify.theme.themes[theme].fontColor}"
                   >Championing Young Persons Across Scotland</h2>
-                  <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
+                  <p class="font-weight-light">Welcome to the Rural Youth Project Smart Village, a collaborative project with The Rural Youth Project, Smart Village Scotland and most importantly young people. </p>
+                  <p class="font-weight-light">Find out more about Rural Youth Project and Smart Village Scotland here
+                  </p>
                   <div>
                     <v-row class="mt-4">
                       <v-col

@@ -23,7 +23,7 @@
               <v-card
                 elevation="0"
                 rounded
-                class="signpost-tile pt-5"
+                class="signpost-tile pt-6"
                 :color=$vuetify.theme.themes[theme].cardBackground
                 style="position: relative"
               >
@@ -41,7 +41,7 @@
                 <v-card-title>{{tile.title}}</v-card-title>
                 <v-card-subtitle>{{tile.subtitle}}</v-card-subtitle>
                 <v-card-actions
-                class="pa-5"
+                class="pa-5 tile-actions"
                 >
                   <NuxtLink :to="{name: 'tile.url'}">see more</NuxtLink>
                 </v-card-actions>
@@ -65,26 +65,26 @@
       return{
         tiles:[
           {
-            title: 'Networking',
-            subtitle: 'Lorem ispum sil elet decorum.',
+            title: 'Networking & Events',
+            subtitle: 'Sign up and join a network of likeminded people where everyone can share ideas, offer advice and inspire others. Up skill and learn via events specific to your needs.',
             icon: 'mdi-account-multiple-plus',
             url:'index'
           },
           {
-            title: 'Business Resources',
-            subtitle: 'Lorem ispum sil elet decorum.',
+            title: 'Resources',
+            subtitle: 'Access resources that give you a great starting point, regardless of the direction you want to go in. From basic business related templates to guides to becoming self employed.',
             icon: 'mdi-file-star',
             url:'index'
           },
           {
-            title: 'Employment',
-            subtitle: 'Lorem ispum sil elet decorum.',
+            title: 'Employment/Volunteering ',
+            subtitle: 'Opportunities for you to engage with organisations offering employment and Volunteer opportunities as well as promoting businesses run by young people.',
             icon: 'mdi-cash-multiple',
             url:'index'
           },
           {
             title: 'Support',
-            subtitle: 'Lorem ispum sil elet decorum.',
+            subtitle: 'Get business and personal support from services and contacts that are tried and tested by other young people.',
             icon: 'mdi-account-heart',
             url:'index'
           }
@@ -142,6 +142,21 @@
 
   .signpost-header{
     padding-bottom: 70px;
+  }
+
+  @media(min-width: 764px){
+    .signpost-tile{
+      min-height: 300px;
+    }
+
+    .tile-actions{
+      position: absolute;
+      bottom: 15px;
+    }
+  }
+
+  .signpost-tile{
+    position: relative;
   }
 
 </style>

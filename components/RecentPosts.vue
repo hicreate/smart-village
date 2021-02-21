@@ -28,7 +28,6 @@
             :to="{name: 'news'}"
             right
             text
-            color="white"
             :nuxt="true"
           >
             see all posts

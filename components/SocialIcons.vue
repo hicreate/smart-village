@@ -10,8 +10,9 @@
           text
           fab
           small
-          :to=icon.link
+          :href=icon.link
           :color=$vuetify.theme.themes[theme].secondary
+          target="_blanks"
         >
           <v-icon class="ryp-social">{{icon.icon}}</v-icon>
         </v-btn>
@@ -31,32 +32,27 @@
           {
             id: 1,
             name: 'Facebook',
-            link: '#',
+            link: 'https://www.facebook.com/RuralYouthProject',
             icon: 'mdi-facebook'
           },
           {
             id: 2,
             name: 'Twitter',
-            link: '#',
+            link: 'https://twitter.com/RYP2018',
             icon: 'mdi-twitter'
           },
           {
             id: 3,
             name: 'Instagram',
-            link: '#',
+            link: 'https://www.instagram.com/RYP2018/',
             icon: 'mdi-instagram'
           },
           {
             id: 4,
-            name: 'Linkedin',
-            link: '#',
-            icon: 'mdi-linkedin'
+            name: 'Youtube',
+            link: 'https://www.youtube.com/channel/UCTMfrFV8iIGhVOSs-gXsL2g?view_as=subscriber',
+            icon: 'mdi-youtube'
           },
-          {
-            name: 'Snapchat',
-            link: '#',
-            icon: 'mdi-snapchat'
-          }
         ]
       }
     },

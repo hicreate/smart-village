@@ -63,6 +63,10 @@ gsap.registerPlugin(Flip);
           stagger: 0.1,
           ease: "power1.inOut"
         });
+      },
+      getContent(){
+          this.$store.dispatch('posts/fetchPosts');
+          this.$store.dispatch('posts/fetchCategories');
       }
     },
     computed:{
@@ -71,8 +75,7 @@ gsap.registerPlugin(Flip);
       })
     },
     mounted(){
-        this.$store.dispatch('posts/fetchPosts');
-        this.$store.dispatch('posts/fetchCategories');
+      this.getContent();
     },
     created(){
       this.resetLoader();
