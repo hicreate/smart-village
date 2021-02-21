@@ -12,6 +12,7 @@
           <v-row class="d-flex">
             <v-col
               lg="5"
+              md="5"
               cols="12"
               class="d-flex align-center hero-head-left"
             >
@@ -20,10 +21,10 @@
               >
                 <v-col
                   class="mx-auto"
-                  lg="9"
-                  md="9"
+                  lg="12"
+                  md="12"
                   cols="12"
-                  :class="{'px-8': $vuetify.breakpoint.smAndDown}"
+                  :class="{'px-8': $vuetify.breakpoint.smAndDown, 'pr-10': $vuetify.breakpoint.mdAndUp}"
                   >
                   <div>
                     <slot name="heroTitle"></slot>

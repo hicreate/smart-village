@@ -1,7 +1,7 @@
 <template>
   <div>
       <v-skeleton-loader
-        v-if="!news"
+        v-if="loader"
         class="mx-auto"
         :max-width= maxCardWidth
         type="card"
@@ -15,7 +15,25 @@
       dark
     >
       <v-img
+        v-if="this.post._embedded['wp:featuredmedia']"
         :src="this.post._embedded['wp:featuredmedia'][0].source_url"
+        height="200px"
+      >
+        <div class="category-chip">
+          <v-chip
+            small
+            dark
+            :color=$vuetify.theme.themes[theme].secondary
+            v-for="(cat, i) in this.post._embedded['wp:term'][0]"
+            :key="i"
+          >
+            {{cat.name}}
+          </v-chip>
+        </div>
+      </v-img>
+      <v-img
+        v-else
+        src="https://content.rypsv.scot/wp-content/uploads/2021/02/placeholder-01.jpg"
         height="200px"
       >
         <div class="category-chip">
@@ -49,30 +67,13 @@
         <v-btn
           color="white"
           text
-          small
           @click="navigatePost"
+          class="read-more-btn"
         >
+          <v-icon class="mr-3">mdi-eye</v-icon>
           Read Post
         </v-btn>
-        <v-spacer></v-spacer>
-        <div>
-          <v-btn
-            text
-            @click="show = !show"
-          >
-            <span style="font-size: 9px !important;" class="overline font-weight-light">OR, SEE SUMMARY</span>
-            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-          </v-btn>
-        </div>
       </v-card-actions>
-
-      <v-expand-transition>
-        <div v-show="show">
-          <v-divider></v-divider>
-          <v-card-text v-html="post.excerpt.rendered">
-          </v-card-text>
-        </div>
-      </v-expand-transition>
     </v-card>
   </div>
 </template>
@@ -93,11 +94,10 @@
     },
     methods:{
       currentPostCategories(){
-        console.log(this.post._embedded['wp:term'][0])
       },
       navigatePost(){
         this.$router.push('/news/' + this.post.slug);
-      }
+      },
     },
     computed:{
       theme () {
@@ -105,7 +105,8 @@
       },
       ...mapState({
         categories: state => state.posts.categories,
-        news: state => state.posts.posts
+        news: state => state.posts.posts,
+        loader: state => state.posts.postLoader
       }),
       featuredImage(){
         if(this.post.featured_image_src){
@@ -155,8 +156,17 @@
     line-height: 1.2em;
   }
 
+  .blog-tile-title a{
+    color: #ffffff;
+  }
+
   .tile-actions{
     border-top: 0.5px solid #fff;
+  }
+
+  .read-more-btn{
+    text-transform: none;
+    font-weight: 700;
   }
 
 </style>

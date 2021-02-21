@@ -25,15 +25,45 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex'
+import {mapActions, mapState} from 'vuex'
   import BlogGrid from '../../components/BlogGrid'
   import NewsFilter from '../../components/NewsFilter'
+import { gsap } from "gsap";
+import { Flip } from "gsap/Flip";
+
+gsap.registerPlugin(Flip);
 
   export default {
     name: 'index',
+    data(){
+      return{
+        postState: null
+      }
+    },
     components:{
       BlogGrid,
       NewsFilter
+    },
+    methods:{
+      ...mapActions({
+        resetLoader: 'posts/resetLoader' // map `this.add()` to `this.$store.dispatch('increment')`
+      }),
+      animationTrigger(){
+
+      },
+      animatePosts(){
+        // Get the initial state
+        const state = Flip.getState(".indi-post");
+        console.log('anim state', state);
+        this.postState = state;
+      },
+      transitionPosts(){
+        Flip.from(this.postState, {
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power1.inOut"
+        });
+      }
     },
     computed:{
       ...mapState({
@@ -43,6 +73,12 @@
     mounted(){
         this.$store.dispatch('posts/fetchPosts');
         this.$store.dispatch('posts/fetchCategories');
+    },
+    created(){
+      this.resetLoader();
+    },
+    watch: {
+
     }
   }
 </script>
