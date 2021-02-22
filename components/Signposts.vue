@@ -9,7 +9,7 @@
         :class="{'px-8': $vuetify.breakpoint.smAndDown}"
         >
           <div class="signpost-header">
-            <h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+            <h2 class="text-center">Designed to meet a full range of needs</h2>
             <h4 class="text-center">See the full range of services available to users and visitors</h4>
           </div>
           <v-row>

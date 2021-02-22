@@ -43,8 +43,12 @@
          </v-row>
           <v-row>
             <v-col>
-              <div class="d-flex">
-                <v-img class="funder-logo" src="/images/funders-1.jpg"></v-img>
+              <div
+                :class="{'flex-column': $vuetify.breakpoint.smAndDown}"
+                class="d-flex">
+                <v-img
+                  :class="{'mb-3': $vuetify.breakpoint.smAndDown}"
+                  class="funder-logo" src="/images/funders-1.jpg"></v-img>
                 <v-img class="funder-logo" src="/images/funders-2.jpg"></v-img>
               </div>
             </v-col>
@@ -89,6 +93,14 @@
 @media(min-width:764px){
   .funder-logo{
     width: 50%;
+    height: 64px;
+    object-fit: contain !important;
+  }
+}
+
+@media(max-width:763px){
+  .funder-logo{
+    width: 100%;
     height: 64px;
     object-fit: contain !important;
   }
