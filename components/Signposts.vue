@@ -74,7 +74,7 @@
             title: 'Resources',
             subtitle: 'Access resources that give you a great starting point, regardless of the direction you want to go in. From basic business related templates to guides to becoming self employed.',
             icon: 'mdi-file-star',
-            url:'about-us'
+            url:'resources'
           },
           {
             title: 'Employment/Volunteering ',

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex">
+     <div class="d-flex social-holder">
       <div
         class="social-icon"
         v-for="(icon, i) in icons"
@@ -18,11 +18,15 @@
         </v-btn>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
   import {gsap} from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
 
   export default {
     name: 'SocialIcons',
@@ -58,16 +62,19 @@
     },
     methods:{
       entranceAnimation(){
-        gsap.from(".social-icon", {
-          scrollTrigger: ".social-icon",
-          duration: 2,
-          scale: 0.8,
-          opacity: 0,
-          delay: 0.5,
-          stagger: 0.2,
-          ease: "elastic",
-          force3D: true
-        });
+        let tl = gsap.timeline({
+          trigger: ".social-container",
+        })
+        ScrollTrigger.refresh();
+
+        tl.addLabel("start")
+          .from(".social-icon", {
+            delay: 0.5,
+            stagger: 0.2,
+            ease: "elastic",
+            duration: 2,
+            scale: 0,
+            opacity: 0,})
       }
     },
     computed:{
@@ -77,6 +84,9 @@
     },
     mounted(){
       this.entranceAnimation();
+    },
+    created(){
+
     }
   }
 </script>

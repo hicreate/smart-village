@@ -36,7 +36,7 @@
                     </RypBtn>
                   </div>
                   <div class="pt-5">
-                    <SocialIcons />
+                    <SocialIcons class="social-container" />
                   </div>
             </v-col>
           </v-row>

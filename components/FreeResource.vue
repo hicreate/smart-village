@@ -11,11 +11,11 @@
         <v-card-title
           :class="subColor"
         >
-          template business plan
+          {{resource.title}}
         </v-card-title>
       </div>
       <v-card-text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        {{resource.summary}}
       </v-card-text>
       <v-divider>
       </v-divider>
@@ -24,6 +24,8 @@
           dark
         text
         class="text-lowercase"
+          :href="resource.url"
+          target="_blank"
         >
           access now
         </v-btn>
@@ -34,6 +36,9 @@
 <script>
   export default {
     name: 'FreeResource',
+    props:{
+      resource: Object
+    },
     computed:{
       subColor(){
         return this.$vuetify.theme.dark ? 'white--text' : 'white--text'

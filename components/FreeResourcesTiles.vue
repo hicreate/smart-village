@@ -25,10 +25,10 @@
                 <v-col
                   cols="12"
                   lg="3"
-                  v-for="(resource, i) in resources"
+                  v-for="(res, i) in resources"
                   :key="i"
                 >
-                  <FreeResource />
+                  <FreeResource :resource="res" />
                 </v-col>
               </v-row>
             </v-col>
@@ -46,7 +46,14 @@
     components: { FreeResource },
     data(){
       return{
-        resources:[1, 2, 3, 4]
+        resources:[
+          {
+            title: 'Pricing Your Services',
+            summary: 'Setting the right price for your product or service is an integral part of your marketing\n' +
+              'strategy.',
+            url: 'https://content.rypsv.scot/wp-content/uploads/2021/02/Pricing-your-services.pdf'
+          }
+        ]
       }
     },
     computed:{

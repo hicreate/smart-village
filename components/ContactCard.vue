@@ -58,8 +58,8 @@
           {
             title: 'email',
             icon: 'mdi-email-edit-outline',
-            detail: 'info@ryp.scot',
-            link: '#'
+            detail: 'hello@ruralyouthproject.com',
+            link: 'mailto: hello@ruralyouthproject.com'
           },
           {
             title: 'post',

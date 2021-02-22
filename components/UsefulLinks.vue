@@ -74,11 +74,11 @@
             text: 'news & updates',
             name: 'news'
           },
-          {
-            id: 5,
-            text: 'contact us',
-            name: 'contact-us'
-          },
+          // {
+          //   id: 5,
+          //   text: 'contact us',
+          //   name: 'contact-us'
+          // },
         ]
       }
     },

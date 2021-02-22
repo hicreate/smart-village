@@ -29,7 +29,7 @@
                 <h3 class="font-weight-light">Sign up, create an account and start to realise you’re businesses full potential alongside like-minded young business owners across Scotland. The full members area is going to launch soon, but signup today to have your account registered in advance and to be ready when full access goes live.</h3>
                 <div class="pa-5">
                   <ul>
-                    <li>signup using the adjacent form</li>
+                    <li>signup using the handy form</li>
                     <li>your registration will be received and reviewed</li>
                     <li>if approved, we'll send you details to access your account</li>
                   </ul>
@@ -89,7 +89,7 @@
         </h3>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light overtop">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <p class="font-weight-light overtop">Access resources that give you a great starting point, regardless of the direction you want to go in. From basic business related templates to guides to becoming self employed.</p>
       </template>
       <template v-slot:sectionCta>
         <h4 class="font-weight-bold">sign in to access additional members-only resources, sign in <a href="/members-area">here</a></h4>
