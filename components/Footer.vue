@@ -44,8 +44,8 @@
           <v-row>
             <v-col>
               <div class="d-flex">
-                <nuxt-img class="funder-logo" src="/images/funders-1.jpg"></nuxt-img>
-                <nuxt-img class="funder-logo" src="/images/funders-2.jpg"></nuxt-img>
+                <v-img class="funder-logo" src="/images/funders-1.jpg"></v-img>
+                <v-img class="funder-logo" src="/images/funders-2.jpg"></v-img>
               </div>
             </v-col>
           </v-row>

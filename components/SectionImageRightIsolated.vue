@@ -35,9 +35,9 @@
             cols="12"
 
           >
-                <nuxt-img
+                <v-img
                   class="section-image"
-                  :src="imageSource"></nuxt-img>
+                  :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>

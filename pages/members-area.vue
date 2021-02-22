@@ -21,7 +21,7 @@
                   :class="{'mt-10': $vuetify.breakpoint.smAndDown, 'd-flex flex-column justify-center': $vuetify.breakpoint.mdAndUp}"
                 >
                   <div>
-                    <nuxt-img class="mb-5 bulb-image" src="https://content.rypsv.scot/wp-content/uploads/2021/02/RYP_Revised_Visuals-07-e1612559149593.png"></nuxt-img>
+                    <v-img class="mb-5 bulb-image" src="https://content.rypsv.scot/wp-content/uploads/2021/02/RYP_Revised_Visuals-07-e1612559149593.png"></v-img>
                     <h2
                       class="h1 mb-2"
                       :style="{color: $vuetify.theme.themes[theme].fontColor}"
