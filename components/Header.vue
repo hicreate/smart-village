@@ -52,7 +52,7 @@
               active-class="ryp-ac"
               exact
               nuxt
-              :to="{name: 'about-us'}"
+              :to="{name: 'about'}"
             >
               <v-list-item-title
                 exact
@@ -102,7 +102,7 @@
           active-class="ryp-ac"
           class="ryp-head-btn ryp-btn"
           :to="{name: 'member-directory'}"
-        >directory</v-btn>
+        >opportunity map</v-btn>
 
       </div>
       <div>
