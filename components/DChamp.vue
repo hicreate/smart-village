@@ -169,14 +169,11 @@
         </div>
 
         <v-card-actions class="d-flex align-center justify-center">
-          <v-sheet
-            class=" d-flex align-center justify-center"
-          height="350px"
-          width="350px"
-          color="secondary"
-          >
-            <h4>Intro Video Goes Here</h4>
-          </v-sheet>
+          <div>
+            <client-only>
+              <youtube :video-id="getId(champ.acf.youtube_intro)" ref="youtube"></youtube>
+            </client-only>
+          </div>
         </v-card-actions>
       </v-card>
     </v-expand-transition>
@@ -192,6 +189,11 @@
     data(){
       return{
         reveal: false,
+      }
+    },
+    methods:{
+      getId(url){
+        return this.$youtube.getIdFromUrl(url)
       }
     },
     mounted(){
