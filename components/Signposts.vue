@@ -30,7 +30,7 @@
               >
                 <div class="icon-group">
                   <div style="position: relative;">
-                    <nuxt-img class="icon-holder" src="images/icon-back.png"></nuxt-img>
+                    <v-img class="icon-holder" src="/images/icon-back.png"></v-img>
                     <v-icon
                       x-large
                       :color=$vuetify.theme.themes[theme].background
