@@ -6,10 +6,10 @@
             <h1
               class="h1 mb-2"
               :style="{color: $vuetify.theme.themes[theme].fontColor}"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            >Meet our Digital Champions</h1>
           </template>
           <template v-slot:sectionSub>
-            <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="font-weight-light">This diverse team has been brought together from all over Scotland with a wealth of knowledge and experience to help create the platform you are on just now. With young people being the users, we needed the same demographic to be at the heart of this platform and that is what we have done. From training, market research and early concept design in November through to collecting, creating and uploading content in February. It has been a process that has relied on the constant input and feedback of this team and their wider networks of other young people to ensure that this platform is current and relevant for young people living in rural Scotland.</p>
           </template>
           <template v-slot:sectionCta>
             <RypBtn color="success" @rypBtnClick="scrollChamps" >

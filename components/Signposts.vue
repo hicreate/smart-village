@@ -43,7 +43,7 @@
                 <v-card-actions
                 class="pa-5 tile-actions"
                 >
-                  <NuxtLink :to="{name: 'tile.url'}">see more</NuxtLink>
+                  <NuxtLink :to="{name: tile.url}">see more</NuxtLink>
                 </v-card-actions>
               </v-card>
             </v-col>
@@ -68,25 +68,25 @@
             title: 'Networking & Events',
             subtitle: 'Sign up and join a network of likeminded people where everyone can share ideas, offer advice and inspire others. Up skill and learn via events specific to your needs.',
             icon: 'mdi-account-multiple-plus',
-            url:'index'
+            url:'about-us'
           },
           {
             title: 'Resources',
             subtitle: 'Access resources that give you a great starting point, regardless of the direction you want to go in. From basic business related templates to guides to becoming self employed.',
             icon: 'mdi-file-star',
-            url:'index'
+            url:'about-us'
           },
           {
             title: 'Employment/Volunteering ',
             subtitle: 'Opportunities for you to engage with organisations offering employment and Volunteer opportunities as well as promoting businesses run by young people.',
             icon: 'mdi-cash-multiple',
-            url:'index'
+            url:'about-us'
           },
           {
             title: 'Support',
             subtitle: 'Get business and personal support from services and contacts that are tried and tested by other young people.',
             icon: 'mdi-account-heart',
-            url:'index'
+            url:'about-us'
           }
         ]
       }

@@ -41,13 +41,22 @@
       return{
         slides:[
           {
-            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Rural-Youth-Ideas-Festival-day-2-104-scaled.jpg'
+            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-image1-scaled.jpg'
           },
           {
-            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Rural-Youth-Ideas-Festival-060-scaled.jpg'
+            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-Image-2.jpg'
           },
           {
-            url:'https://content.rypsv.scot/wp-content/uploads/2021/01/Rural-Youth-Ideas-Festival-130.jpg'
+            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-image.jpg'
+          },
+          {
+            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-image-2-1.jpg'
+          },
+          {
+            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-image-5-scaled.jpeg'
+          },
+          {
+            url:'https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-image-4-scaled.jpg'
           },
         ]
       }

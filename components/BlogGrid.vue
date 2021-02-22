@@ -6,7 +6,7 @@
         <v-col
           v-for="(post, i) in news"
           :key="i"
-          xl="3"
+          xl="2"
           lg="3"
           md="3"
           cols="12"

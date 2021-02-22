@@ -44,7 +44,7 @@
 
 <!--    section in a lighter frame-->
     <div :style="{background: $vuetify.theme.themes[theme].altBackground}">
-      <SectionImageRightIsolated image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/Rural-Youth-Ideas-Festival-098-scaled.jpg">
+      <SectionImageRightIsolated image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-image-5-scaled.jpeg">
         <template v-slot:sectionTitle>
           <h2
             class="h1 mb-2"

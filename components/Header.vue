@@ -52,21 +52,31 @@
               active-class="ryp-ac"
               exact
               nuxt
+              :to="{name: 'about-us'}"
+            >
+              <v-list-item-title
+                exact
+                class="body-2 list-link">about us</v-list-item-title>
+            </v-list-item>
+            <v-list-item
+              active-class="ryp-ac"
+              exact
+              nuxt
               :to="{name: 'about-digital-champions'}"
             >
               <v-list-item-title
                 exact
                 class="body-2 list-link">digital champions</v-list-item-title>
             </v-list-item>
-            <v-list-item
-              active-class="ryp-ac"
-              exact
-              nuxt
-              :to="{name: 'about-how-we-work'}"
-            >
-              <v-list-item-title
-                class="body-2 list-link">how we work</v-list-item-title>
-            </v-list-item>
+<!--            <v-list-item-->
+<!--              active-class="ryp-ac"-->
+<!--              exact-->
+<!--              nuxt-->
+<!--              :to="{name: 'about-how-we-work'}"-->
+<!--            >-->
+<!--              <v-list-item-title-->
+<!--                class="body-2 list-link">how we work</v-list-item-title>-->
+<!--            </v-list-item>-->
           </v-list>
         </v-menu>
 
@@ -86,6 +96,14 @@
           :to="{name: 'news'}"
         >news & updates</v-btn>
 
+        <v-btn
+          text
+          nuxt
+          active-class="ryp-ac"
+          class="ryp-head-btn ryp-btn"
+          :to="{name: 'member-directory'}"
+        >directory</v-btn>
+
       </div>
       <div>
         <RypBtn :to="{name: 'members-area'}" color="success">
@@ -93,11 +111,11 @@
             members area
           </template>
         </RypBtn>
-        <RypBtn :to="{name: 'member-directory'}" color="accent">
-          <template v-slot:btnText>
-            member directory
-          </template>
-        </RypBtn>
+<!--        <RypBtn :to="{name: 'member-directory'}" color="accent">-->
+<!--          <template v-slot:btnText>-->
+<!--            member directory-->
+<!--          </template>-->
+<!--        </RypBtn>-->
       </div>
     </div>
 

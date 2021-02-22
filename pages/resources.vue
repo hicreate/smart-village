@@ -113,7 +113,7 @@
         >Like what you see? Become a member for FREE today</h1>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="font-weight-light">Join the RYP Smart Village for even more useful resources and access to the members directory that will help you develop your skills and find services and information that are specific to your location.</p>
       </template>
       <template v-slot:sectionCta>
         <RypBtn :to="{name: 'sign-up'}" color="success" >
