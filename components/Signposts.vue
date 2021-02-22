@@ -17,6 +17,7 @@
               cols="12"
               lg="3"
               md="3"
+              sm="6"
               v-for="(tile, i) in tiles"
             :key="i"
             >

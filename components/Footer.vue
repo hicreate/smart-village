@@ -19,18 +19,36 @@
           />
         </v-col>
         <v-col
-          lg="3"
-          md="12"
-          cols="12"
+        cols="12"
+        lg="6"
+        md="6"
         >
-          <UsefulLinks />
-        </v-col>
-        <v-col
-          lg="3"
-          md="3"
-          cols="12"
-        >
-          <QuickLinks />
+         <v-row>
+           <v-col
+             lg="6"
+             md="6"
+             sm="6"
+             cols="12"
+           >
+             <UsefulLinks />
+           </v-col>
+           <v-col
+             lg="6"
+             md="6"
+             sm="6"
+             cols="12"
+           >
+             <QuickLinks />
+           </v-col>
+         </v-row>
+          <v-row>
+            <v-col>
+              <div>
+                <nuxt-img></nuxt-img>
+                <nuxt-img></nuxt-img>
+              </div>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-col>

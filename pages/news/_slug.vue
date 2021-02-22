@@ -266,17 +266,19 @@ import {mapState} from 'vuex'
       min-height: 55vh;
     }
 
+    .mobile-sidebar{
+      max-width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+
+  @media(max-width:784px){
     .col-cont-left{
       order:2;
     }
 
     .col-cont-right{
       order:1;
-    }
-
-    .mobile-sidebar{
-      max-width: 90% !important;
-      margin: 0 auto;
     }
   }
 

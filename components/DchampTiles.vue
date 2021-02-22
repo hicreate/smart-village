@@ -6,6 +6,7 @@
           :key="i"
           xl="6"
           lg="6"
+          md="6"
           cols="12"
           >
            <DChamp :champ="champ"></DChamp>

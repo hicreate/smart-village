@@ -9,6 +9,7 @@
           xl="3"
           lg="3"
           md="3"
+          sm="4"
           cols="12"
         >
           <client-only><BlogTile :post="post" /></client-only>

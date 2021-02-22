@@ -77,7 +77,8 @@
   }
 
   .bulb-image{
-    width: 320px;
+    width: 70%;
+    margin: 0 auto;
   }
 
 </style>

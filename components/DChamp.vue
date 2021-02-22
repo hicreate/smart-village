@@ -168,10 +168,10 @@
           </v-btn>
         </div>
 
-        <v-card-actions class="d-flex align-center justify-center">
-          <div>
+        <v-card-actions style="height: 100%;" class="d-flex align-center justify-center">
+          <div style="width: 100%;">
             <client-only>
-              <youtube :video-id="getId(champ.acf.youtube_intro)" ref="youtube"></youtube>
+              <youtube :player-vars="playerVars" :fit-parent="true" :video-id="getId(champ.acf.youtube_intro)" ref="youtube"></youtube>
             </client-only>
           </div>
         </v-card-actions>
@@ -189,6 +189,9 @@
     data(){
       return{
         reveal: false,
+        playerVars: {
+          autoplay: 1
+        }
       }
     },
     methods:{

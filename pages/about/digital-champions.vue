@@ -30,11 +30,13 @@
             <v-row>
               <v-col
                 lg="10"
+                md="10"
+                cols="12"
                 class="mx-auto"
               >
                 <v-row>
                   <v-col
-                    lg="10"
+                    xl="10"
                   >
                     <DchampTiles :champs="champions" id="dchamps"></DchampTiles>
                   </v-col>
