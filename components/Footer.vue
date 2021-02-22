@@ -43,9 +43,9 @@
          </v-row>
           <v-row>
             <v-col>
-              <div>
-                <nuxt-img></nuxt-img>
-                <nuxt-img></nuxt-img>
+              <div class="d-flex">
+                <nuxt-img class="funder-logo" src="/images/funders-1.jpg"></nuxt-img>
+                <nuxt-img class="funder-logo" src="/images/funders-2.jpg"></nuxt-img>
               </div>
             </v-col>
           </v-row>
@@ -84,5 +84,13 @@
 .ryp-footer{
   -webkit-box-shadow: 0px -5px 9px 0px rgba(0,0,0,0.05);
   box-shadow: 0px -5px 9px 0px rgba(0,0,0,0.05);
+}
+
+@media(min-width:764px){
+  .funder-logo{
+    width: 50%;
+    height: 64px;
+    object-fit: contain !important;
+  }
 }
 </style>
