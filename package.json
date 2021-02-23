@@ -15,7 +15,7 @@
     "core-js": "^3.9.0",
     "gsap": "file:gsap-bonus.tgz",
     "moment": "^2.29.1",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.14.8",
     "nuxt-mail": "^1.0.3",
     "nuxt-start": "^2.15.2",
     "nuxt-svg-loader": "^1.2.0",
