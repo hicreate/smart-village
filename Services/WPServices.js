@@ -52,5 +52,10 @@ export default{
   //get categories by individual ids
   getCategory(id){
      return apiClient.get('/categories/' + id)
+  },
+
+  //create new user
+  createUser(data){
+    return apiClient.post('users/register', data)
   }
 }
