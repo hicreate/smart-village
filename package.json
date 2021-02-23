@@ -11,8 +11,8 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.5",
-    "core-js": "^3.8.3",
+    "@nuxtjs/axios": "^5.13.1",
+    "core-js": "^3.9.0",
     "gsap": "file:gsap-bonus.tgz",
     "moment": "^2.29.1",
     "nuxt": "^2.14.12",

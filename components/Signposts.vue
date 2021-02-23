@@ -22,10 +22,11 @@
             :key="i"
             >
               <v-card
+                dark
                 elevation="0"
                 rounded
                 class="signpost-tile pt-6"
-                :color=$vuetify.theme.themes[theme].cardBackground
+                :color=$vuetify.theme.themes[theme].primary
                 style="position: relative"
               >
                 <div class="icon-group">
@@ -44,7 +45,7 @@
                 <v-card-actions
                 class="pa-5 tile-actions"
                 >
-                  <NuxtLink :to="{name: tile.url}">see more</NuxtLink>
+                  <NuxtLink class="white--text" :to="{name: tile.url}">see more</NuxtLink>
                 </v-card-actions>
               </v-card>
             </v-col>
