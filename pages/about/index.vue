@@ -3,7 +3,8 @@
     <!--    section in a lighter frame-->
       <v-row>
         <v-col
-          class="rounded-lg extra-height my-2 mx-8"
+          :class="{'rounded-lg extra-height my-2 mx-8': $vuetify.breakpoint.mdAndUp, 'px-8': $vuetify.breakpoint.smAndDown}"
+          class=""
         >
           <v-row>
             <v-col
@@ -36,11 +37,14 @@
                         class="secondary logo-box"
                       >
                         <div
-                          :class="{'d-flex flex-row align-center': $vuetify.breakpoint.mdAndUp, 'd-flex flex-column': $vuetify.breakpoint.smAndDown}"
+                          :class="{'d-flex flex-row align-center': $vuetify.breakpoint.mdAndUp}"
                           class="pa-5 secondary"
                         >
                           <h3 class="white--text mr-8">Delivered by</h3>
-                          <div class="d-flex">
+                          <div
+                            class="d-flex"
+                            :class="{'flex-row': $vuetify.breakpoint.mdAndUp}"
+                          >
                             <v-img
                               contain
                               class="partner-logo"
@@ -63,7 +67,7 @@
                   md="7"
                   cols="12"
                   class="d-flex align-center justify-center col-cont-right"
-                  :class="{'px-10': $vuetify.breakpoint.mdAndUp, 'px-0': $vuetify.breakpoint.smAndDown}"
+                  :class="{'px-10': $vuetify.breakpoint.mdAndUp, '': $vuetify.breakpoint.smAndDown}"
                 >
                   <v-img
                     class="mb-5 top-image"
@@ -222,14 +226,6 @@
 .partner-logo{
   max-width: 124px;
 }
-
-  .champ-cup{
-    width: 200px;
-  }
-
-  .image-grid{
-    width: 100%;
-  }
 
 
 </style>
