@@ -69,7 +69,7 @@
             title: 'Networking & Events',
             subtitle: 'Sign up and join a network of likeminded people where everyone can share ideas, offer advice and inspire others. Up skill and learn via events specific to your needs.',
             icon: 'mdi-account-multiple-plus',
-            url:'about-us'
+            url:'about'
           },
           {
             title: 'Resources',
@@ -81,13 +81,13 @@
             title: 'Employment/Volunteering ',
             subtitle: 'Opportunities for you to engage with organisations offering employment and Volunteer opportunities as well as promoting businesses run by young people.',
             icon: 'mdi-cash-multiple',
-            url:'about-us'
+            url:'about'
           },
           {
             title: 'Support',
             subtitle: 'Get business and personal support from services and contacts that are tried and tested by other young people.',
             icon: 'mdi-account-heart',
-            url:'about-us'
+            url:'about'
           }
         ]
       }

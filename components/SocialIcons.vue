@@ -83,7 +83,6 @@
       }
     },
     mounted(){
-      this.entranceAnimation();
     },
     created(){
 
