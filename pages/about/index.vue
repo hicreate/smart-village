@@ -65,9 +65,9 @@
                   class="d-flex align-center justify-center col-cont-right"
                   :class="{'px-10': $vuetify.breakpoint.mdAndUp, 'px-0': $vuetify.breakpoint.smAndDown}"
                 >
-                  <nuxt-img
+                  <v-img
                     class="mb-5 top-image"
-                    src="https://content.rypsv.scot/wp-content/uploads/2021/02/General-website-image-e1614021674365.jpg"></nuxt-img>
+                    src="https://content.rypsv.scot/wp-content/uploads/2021/02/General-website-image-e1614021674365.jpg"></v-img>
                 </v-col>
               </v-row>
             </v-col>

@@ -23,9 +23,9 @@
                 md="10"
                 cols="12"
               >
-                <nuxt-img
+                <v-img
                   class="mobile-image"
-                  :src="imageSource"></nuxt-img>
+                  :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>

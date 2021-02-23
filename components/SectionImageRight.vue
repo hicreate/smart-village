@@ -45,8 +45,8 @@
               <v-col
                 cols="12"
               >
-                <nuxt-img
-                  :src="imageSource"></nuxt-img>
+                <v-img
+                  :src="imageSource"></v-img>
               </v-col>
             </v-row>
           </v-col>
