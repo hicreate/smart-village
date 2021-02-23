@@ -57,15 +57,7 @@
             </v-text-field>
 
             <!--            date of birth field-->
-            <v-text-field
-              dense
-              solo
-              elevation="0"
-              light
-              label="your business name"
-              full-width
-            >
-            </v-text-field>
+
             <v-checkbox
             label="I agree for my details to be processed in accordance with the privacy policy."
             ></v-checkbox>
