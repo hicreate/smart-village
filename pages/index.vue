@@ -24,10 +24,12 @@
         <h2
           class="h1 mb-2"
           :style="{color: $vuetify.theme.themes[theme].fontColor}"
-        >Sign up for a free account to access resources and our directory</h2>
+        >Sign up for a free account to access resources and our opportunities map</h2>
       </template>
       <template v-slot:sectionSub>
-        <p class="font-weight-light">Join the RYP Smart Village for even more useful resources and access to the members directory that will help you develop your skills and find services and information that are specific to your location.</p>
+        <p class="font-weight-light">Join the <strong>Rural Youth Project</strong> Smart Village for even more useful resources and access to the members directory that will help you develop your skills and find services and information that are specific to your location.</p>
+        <p class="font-weight-light">Sign up, create an account and join our community to connect, collaborate and discover new opportunities that will help you to live and work in rural Scotland. </p>
+      <p class="font-weight-light">Whether you have an idea you want to explore, you are setting up a business of your own or simply want to meet other young people you have come to the right place.</p>
       </template>
       <template v-slot:sectionCta>
         <RypBtn :to="{name: 'about'}" color="success" >
@@ -44,7 +46,7 @@
 
 <!--    section in a lighter frame-->
     <div :style="{background: $vuetify.theme.themes[theme].altBackground}">
-      <SectionImageRightIsolated image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/Slideshow-image-5-scaled.jpeg">
+      <SectionImageRightIsolated image-source="https://content.rypsv.scot/wp-content/uploads/2021/02/Jordane-OuterHebs.jpg">
         <template v-slot:sectionTitle>
           <h2
             class="h1 mb-2"

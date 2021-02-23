@@ -42,14 +42,20 @@
            </v-col>
          </v-row>
           <v-row>
-            <v-col>
+            <v-col :class="{'px-5': $vuetify.breakpoint.smAndDown}">
               <div
-                :class="{'flex-column': $vuetify.breakpoint.smAndDown}"
-                class="d-flex">
-                <v-img
-                  :class="{'mb-3': $vuetify.breakpoint.smAndDown}"
-                  class="funder-logo" src="/images/funders-1.jpg"></v-img>
-                <v-img class="funder-logo" src="/images/funders-2.jpg"></v-img>
+                :class="{'flex-column justify-center align-center': $vuetify.breakpoint.smAndDown}">
+                <div class="d-flex funder-holder-container">
+                  <div class="funder-holder">
+                    <v-img
+                      :class="{'mb-3': $vuetify.breakpoint.smAndDown}"
+                      class="funder-logo-1" contain src="/images/funders-1.jpg"></v-img>
+                  </div>
+                  <div class="funder-holder">
+                    <v-img class="funder-logo-2" contain src="/images/funders-2.jpg"></v-img>
+                  </div>
+                </div>
+
               </div>
             </v-col>
           </v-row>
@@ -90,19 +96,34 @@
   box-shadow: 0px -5px 9px 0px rgba(0,0,0,0.05);
 }
 
-@media(min-width:764px){
-  .funder-logo{
-    width: 50%;
-    height: 64px;
-    object-fit: contain !important;
+  .funder-logo-1{
+    max-width: 96px;
+  }
+
+  .funder-logo-2{
+    max-width: 296px;
+  }
+
+@media(max-width:763px){
+  .funder-logo-1{
+    max-width: 64px;
+  }
+
+  .funder-logo-2{
+    max-width: 214px;
+  }
+
+  .funder-holder-container{
+display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
-@media(max-width:763px){
-  .funder-logo{
-    width: 100%;
-    height: 64px;
-    object-fit: contain !important;
+  .funder-holder{
+    background-color: #fff;
+    padding: 10px;
   }
-}
+
+
 </style>

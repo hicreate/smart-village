@@ -73,12 +73,12 @@ export default {
           error: '#FF1900',
           success: '#6DB41D',
           background: '#ffffff',
-          altBackground:'#F5F1E5',
+          altBackground:'#ffffff',
           sectionBG: '#F2F0EC',
           brandPrimary: '#6DB41D',
           fontColor: '#000000',
           cardBackground:'#eaf5e8',
-          cardBG: '#9e7a5a'
+          cardBG: '#6DB41D'
         },
         dark: {
           primary: '#6DB41D',

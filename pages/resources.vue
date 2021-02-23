@@ -25,13 +25,13 @@
                 <h2
                   class="h1 mb-2"
                   :style="{color: $vuetify.theme.themes[theme].fontColor}"
-                >Business changing resources</h2>
-                <h3 class="font-weight-light">Sign up, create an account and start to realise you’re businesses full potential alongside like-minded young business owners across Scotland. The full members area is going to launch soon, but signup today to have your account registered in advance and to be ready when full access goes live.</h3>
+                >Resources for you</h2>
+                <h3 class="font-weight-light">The full members area is going to launch soon, but signup today to have your account registered in advance and to be ready when full access goes live. The resources on here are chosen with real young peoples experiences in mind. From simple to use templates to insider knowledge these resources will allow you to learn and develop your skills through real life scenarios.</h3>
                 <div class="pa-5">
                   <ul>
                     <li>signup using the handy form</li>
                     <li>your registration will be received and reviewed</li>
-                    <li>if approved, we'll send you details to access your account</li>
+                    <li>we'll then send you details to access your account, once approved</li>
                   </ul>
                 </div>
 

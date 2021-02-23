@@ -50,23 +50,11 @@
       return{
         contactDetails:[
           {
-            title: 'phone',
-            icon: 'mdi-cellphone-iphone',
-            detail: '01234 56789',
-            link: '#'
-          },
-          {
             title: 'email',
             icon: 'mdi-email-edit-outline',
             detail: 'hello@ruralyouthproject.com',
             link: 'mailto: hello@ruralyouthproject.com'
           },
-          {
-            title: 'post',
-            icon: 'mdi-mailbox-open-up-outline',
-            detail: 'Full Address Goes Here, Postcode',
-            link: '#'
-          }
         ]
       }
     },
