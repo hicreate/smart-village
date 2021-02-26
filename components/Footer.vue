@@ -45,14 +45,12 @@
             <v-col :class="{'px-5': $vuetify.breakpoint.smAndDown}">
               <div
                 :class="{'flex-column justify-center align-center': $vuetify.breakpoint.smAndDown}">
-                <div class="d-flex funder-holder-container">
-                  <div class="funder-holder">
+                <div class="d-flex">
+                  <div>
                     <v-img
+                      class="funder-logo"
                       :class="{'mb-3': $vuetify.breakpoint.smAndDown}"
-                      class="funder-logo-1" contain src="/images/funders-1.jpg"></v-img>
-                  </div>
-                  <div class="funder-holder">
-                    <v-img class="funder-logo-2" contain src="/images/funders-2.jpg"></v-img>
+                     contain src="/images/funders.jpg"></v-img>
                   </div>
                 </div>
 
@@ -96,34 +94,12 @@
   box-shadow: 0px -5px 9px 0px rgba(0,0,0,0.05);
 }
 
-  .funder-logo-1{
-    max-width: 96px;
-  }
-
-  .funder-logo-2{
-    max-width: 296px;
-  }
-
-@media(max-width:763px){
-  .funder-logo-1{
-    max-width: 64px;
-  }
-
-  .funder-logo-2{
-    max-width: 214px;
-  }
-
-  .funder-holder-container{
-display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.funder-logo{
+  max-width: 580px;
 }
 
-  .funder-holder{
-    background-color: #fff;
-    padding: 10px;
-  }
+@media(max-width:763px){
 
+}
 
 </style>

@@ -7,7 +7,12 @@
     elevate-on-scroll
     extended
   >
-    <LogoText />
+    <ClientLogos
+      :class="{'d-none': $vuetify.breakpoint.smAndDown}"
+    />
+    <LogoText
+      :class="{'ml-4': $vuetify.breakpoint.mdAndUp}"
+    />
     <v-spacer></v-spacer>
     <div
       :class="{'d-none': $vuetify.breakpoint.smAndDown, 'd-flex': $vuetify.breakpoint.mdAndUp}"
@@ -130,10 +135,12 @@
   import DarkMode from './DarkMode'
   import RypBtn from './RypBtn'
   import LogoText from './LogoText'
+  import ClientLogos from './ClientLogos'
 
   export default {
     name: 'Header',
     components: {
+      ClientLogos,
       DarkMode,
       RypBtn,
       LogoText
